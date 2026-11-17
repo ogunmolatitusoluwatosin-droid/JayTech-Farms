@@ -104,6 +104,43 @@ export const ContactPage: React.FC<ContactPageProps> = ({
     });
   };
 
+  const buildClientWhatsAppUrl = (leadId: string) => {
+    const interestsText =
+      formData.farmingInterests.length > 0
+        ? formData.farmingInterests.map((i) => `• ${i}`).join('\n')
+        : 'Not specified';
+
+    const landText =
+      formData.landStatus === 'Yes, in another State in Nigeria' && formData.otherStateLocation
+        ? `${formData.landStatus} (${formData.otherStateLocation})`
+        : formData.landStatus;
+
+    const text = `*NEW JAYTECH FARMS CLIENT BRIEFING*
+-----------------------------------
+Full Name: ${formData.fullName}
+Company: ${formData.companyName || 'N/A'}
+Email: ${formData.email}
+WhatsApp/Phone: ${formData.phone}
+Location: ${formData.location || 'N/A'}
+
+Farming Interest:
+${interestsText}
+
+Land Status: ${landText}
+Project Scale: ${formData.landScale}
+Budget Bracket: ${formData.budget}
+Timeline: ${formData.timeline}
+
+Requirements:
+"${formData.additionalDetails || 'None specified'}"
+
+-----------------------------------
+Ref ID: ${leadId}
+Sent via JAYTECH FARMS Portal.`;
+
+    return `https://wa.me/${CONTACT_INFO.whatsappIntl}?text=${encodeURIComponent(text)}`;
+  };
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!formData.fullName.trim() || !formData.phone.trim() || !formData.email.trim()) {
@@ -121,18 +158,54 @@ export const ContactPage: React.FC<ContactPageProps> = ({
     setLoading(true);
 
     try {
-      const res = await fetch('/api/submit-lead', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(formData)
-      });
+      let submittedViaApi = false;
 
-      const data = await res.json();
-      if (!res.ok) {
-        throw new Error(data.error || 'Unable to submit consultation brief.');
+      try {
+        const res = await fetch('/api/submit-lead', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(formData)
+        });
+
+        const contentType = res.headers.get('content-type') || '';
+        if (res.ok && contentType.includes('application/json')) {
+          const data = await res.json();
+          setSubmissionResult(data);
+          submittedViaApi = true;
+        }
+      } catch {
+        // Static hosts such as Netlify do not run Express API routes; fall back below.
       }
 
-      setSubmissionResult(data);
+      if (!submittedViaApi) {
+        const leadId = 'LEAD-' + Date.now();
+        const submittedAt = new Date().toISOString();
+        const payload = { id: leadId, submittedAt, ...formData };
+        let googleSheetSynced = false;
+
+        if (GOOGLE_APPS_SCRIPT_URL) {
+          try {
+            await fetch(GOOGLE_APPS_SCRIPT_URL, {
+              method: 'POST',
+              mode: 'no-cors',
+              headers: { 'Content-Type': 'application/json' },
+              body: JSON.stringify(payload)
+            });
+            googleSheetSynced = true;
+          } catch {
+            googleSheetSynced = false;
+          }
+        }
+
+        setSubmissionResult({
+          success: true,
+          lead: payload,
+          whatsappUrl: buildClientWhatsAppUrl(leadId),
+          googleSheetSynced,
+          message: 'Consultation brief prepared successfully!'
+        });
+      }
+
       window.scrollTo({ top: 0, behavior: 'smooth' });
     } catch (err: any) {
       setErrorMsg(err.message || 'An error occurred while submitting your brief. Please try again.');

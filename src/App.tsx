@@ -54,8 +54,12 @@ export default function App() {
     setPreselectedInterest(interest);
     setCurrentPage(page);
     const targetPath = PAGE_TO_PATH[page];
-    if (window.location.pathname !== targetPath) {
-      window.history.pushState({}, '', targetPath);
+    try {
+      if (window.location.pathname !== targetPath) {
+        window.history.pushState({}, '', targetPath);
+      }
+    } catch {
+      // Ignore history errors in restricted contexts
     }
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
