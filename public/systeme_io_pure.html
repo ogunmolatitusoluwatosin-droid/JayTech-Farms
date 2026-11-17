@@ -1,0 +1,863 @@
+<!-- ==========================================================================
+     JAYTECH FARMS - HIGH PERFORMANCE PURE CSS & HTML FOR SYSTEME.IO
+     - Zero external JS libraries (100% immune to Systeme.io script strip)
+     - Ultra-fast native scrolling (no sluggish scroll traps)
+     - Bulletproof instant button scroll & direct WhatsApp routing
+     ========================================================================== -->
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+  /* ================= RESET & ULTRA-FAST SCROLL ================= */
+  html {
+    scroll-behavior: smooth !important;
+    -webkit-overflow-scrolling: touch !important;
+  }
+  
+  #jf-wrap {
+    font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+    background-color: #ffffff !important;
+    color: #052e16 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+    line-height: 1.5 !important;
+    font-size: 15px !important;
+    overflow-x: hidden !important;
+    -webkit-font-smoothing: antialiased !important;
+  }
+  #jf-wrap * {
+    box-sizing: border-box !important;
+    margin: 0;
+    padding: 0;
+  }
+  #jf-wrap h1, #jf-wrap h2, #jf-wrap h3, #jf-wrap h4 {
+    font-family: 'Playfair Display', Georgia, serif !important;
+    line-height: 1.2 !important;
+    font-weight: 800 !important;
+    letter-spacing: -0.02em !important;
+  }
+  #jf-wrap a {
+    text-decoration: none !important;
+    color: inherit;
+    cursor: pointer !important;
+  }
+  #jf-wrap input, #jf-wrap select, #jf-wrap textarea, #jf-wrap button {
+    font-family: 'Plus Jakarta Sans', sans-serif !important;
+    font-size: 14px !important;
+  }
+
+  /* ================= RESPONSIVE CONTAINERS & GRIDS ================= */
+  .jf-container {
+    max-width: 1200px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+    width: 100% !important;
+  }
+  .jf-grid-2 {
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 30px !important;
+  }
+  .jf-grid-3 {
+    display: grid !important;
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 24px !important;
+  }
+  .jf-grid-4 {
+    display: grid !important;
+    grid-template-columns: repeat(4, 1fr) !important;
+    gap: 20px !important;
+  }
+
+  @media (max-width: 991px) {
+    .jf-grid-4 { grid-template-columns: repeat(2, 1fr) !important; }
+    .jf-grid-3 { grid-template-columns: 1fr !important; }
+    .jf-grid-2 { grid-template-columns: 1fr !important; }
+    .jf-nav-links { display: none !important; }
+  }
+  @media (max-width: 640px) {
+    .jf-grid-4 { grid-template-columns: 1fr !important; }
+    .jf-grid-2 { grid-template-columns: 1fr !important; }
+    .jf-hero-h1 { font-size: 32px !important; }
+    .jf-hero-btns { flex-direction: column !important; }
+    .jf-hero-btns a { width: 100% !important; text-align: center !important; }
+  }
+
+  /* ================= BUTTONS & CARDS ================= */
+  .jf-btn-gold {
+    display: inline-block !important;
+    background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%) !important;
+    color: #052e16 !important;
+    font-weight: 800 !important;
+    padding: 14px 28px !important;
+    border-radius: 12px !important;
+    border: none !important;
+    cursor: pointer !important;
+    text-align: center !important;
+    box-shadow: 0 4px 14px rgba(245, 158, 11, 0.3) !important;
+    user-select: none !important;
+    transition: transform 0.15s ease, box-shadow 0.15s ease !important;
+  }
+  .jf-btn-gold:hover {
+    background: linear-gradient(135deg, #fcd34d 0%, #fbbf24 100%) !important;
+    transform: translateY(-2px) !important;
+    box-shadow: 0 6px 20px rgba(245, 158, 11, 0.4) !important;
+  }
+  .jf-btn-gold:active {
+    transform: translateY(1px) !important;
+  }
+
+  .jf-btn-dark {
+    display: inline-block !important;
+    background: #14532d !important;
+    color: #f0fdf4 !important;
+    font-weight: 700 !important;
+    padding: 14px 24px !important;
+    border-radius: 12px !important;
+    border: 1px solid #16a34a !important;
+    cursor: pointer !important;
+    text-align: center !important;
+    user-select: none !important;
+    transition: background 0.15s ease, border-color 0.15s ease !important;
+  }
+  .jf-btn-dark:hover {
+    background: #166534 !important;
+    border-color: #fbbf24 !important;
+  }
+
+  .jf-badge-gold {
+    display: inline-block !important;
+    background-color: rgba(251, 191, 36, 0.15) !important;
+    color: #fbbf24 !important;
+    border: 1px solid rgba(251, 191, 36, 0.35) !important;
+    font-size: 11px !important;
+    font-weight: 800 !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.08em !important;
+    padding: 6px 14px !important;
+    border-radius: 30px !important;
+    margin-bottom: 15px !important;
+  }
+
+  .jf-card-dark {
+    background-color: #083319 !important;
+    border: 1px solid #166534 !important;
+    border-radius: 20px !important;
+    padding: 28px !important;
+    color: #ffffff !important;
+  }
+
+  .jf-card-light {
+    background-color: #ffffff !important;
+    border: 1px solid #dcfce7 !important;
+    border-radius: 20px !important;
+    padding: 26px !important;
+    box-shadow: 0 4px 15px rgba(5, 46, 22, 0.04) !important;
+  }
+
+  /* Form Elements */
+  .jf-form-group {
+    margin-bottom: 16px !important;
+  }
+  .jf-form-group label {
+    display: block !important;
+    color: #bbf7d0 !important;
+    font-size: 12px !important;
+    font-weight: 700 !important;
+    margin-bottom: 6px !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.04em !important;
+  }
+  .jf-input {
+    width: 100% !important;
+    padding: 13px 16px !important;
+    border-radius: 10px !important;
+    background-color: #052e16 !important;
+    border: 1px solid #166534 !important;
+    color: #ffffff !important;
+    outline: none !important;
+    transition: border-color 0.2s ease !important;
+  }
+  .jf-input:focus {
+    border-color: #fbbf24 !important;
+  }
+
+  /* Header */
+  .jf-header {
+    background-color: #052e16 !important;
+    border-bottom: 1px solid #166534 !important;
+    padding: 14px 0 !important;
+    position: sticky !important;
+    top: 0 !important;
+    z-index: 9999 !important;
+  }
+  .jf-header-flex {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+  }
+  .jf-logo-box {
+    width: 44px !important;
+    height: 44px !important;
+    background: linear-gradient(135deg, #fbbf24, #d97706) !important;
+    border-radius: 12px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    font-weight: 900 !important;
+    color: #052e16 !important;
+    font-size: 20px !important;
+    margin-right: 12px !important;
+  }
+  .jf-nav-links a {
+    color: #bbf7d0 !important;
+    font-size: 14px !important;
+    font-weight: 600 !important;
+    margin: 0 12px !important;
+    transition: color 0.15s ease !important;
+  }
+  .jf-nav-links a:hover {
+    color: #fbbf24 !important;
+  }
+
+  /* Hero Section */
+  .jf-hero {
+    background-color: #052e16 !important;
+    color: #ffffff !important;
+    padding: 60px 0 80px 0 !important;
+    position: relative !important;
+  }
+
+  /* Footer */
+  .jf-footer {
+    background-color: #031c0e !important;
+    color: #86efac !important;
+    padding: 50px 0 30px 0 !important;
+    border-top: 1px solid #14532d !important;
+    font-size: 13px !important;
+  }
+</style>
+
+<div id="jf-wrap">
+
+  <!-- ================= HEADER ================= -->
+  <header class="jf-header">
+    <div class="jf-container jf-header-flex">
+      
+      <!-- Brand Logo -->
+      <a href="javascript:void(0)" onclick="jfScrollTo('hero')" style="display: flex !important; align-items: center !important;">
+        <div class="jf-logo-box">JF</div>
+        <div>
+          <div style="font-family: 'Playfair Display', serif !important; font-weight: 800 !important; font-size: 22px !important; color: #ffffff !important; line-height: 1.1 !important;">
+            JAYTECH FARMS
+          </div>
+          <div style="font-size: 11px !important; color: #86efac !important; font-weight: 500 !important;">
+            Turnkey Agribusiness Engineering
+          </div>
+        </div>
+      </a>
+
+      <!-- Desktop Nav -->
+      <nav class="jf-nav-links">
+        <a href="javascript:void(0)" onclick="jfScrollTo('problem-promise')">Why Turnkey</a>
+        <a href="javascript:void(0)" onclick="jfScrollTo('services')">Signature Services</a>
+        <a href="javascript:void(0)" onclick="jfScrollTo('kwara-advantage')">Kwara Advantage</a>
+        <a href="javascript:void(0)" onclick="jfScrollTo('how-we-work')">How We Work</a>
+        <a href="javascript:void(0)" onclick="jfScrollTo('roi-calculator')">Yield Estimator</a>
+      </nav>
+
+      <!-- Quick Contact / CTA -->
+      <div style="display: flex !important; align-items: center !important; gap: 10px !important;">
+        <a href="javascript:void(0)" onclick="jfOpenWhatsApp()" class="jf-btn-dark" style="padding: 10px 16px !important; font-size: 13px !important;">
+          💬 08033106047
+        </a>
+        <a href="javascript:void(0)" onclick="jfScrollTo('consultation-form')" class="jf-btn-gold" style="padding: 10px 18px !important; font-size: 13px !important;">
+          Book Consultation
+        </a>
+      </div>
+
+    </div>
+  </header>
+
+
+  <!-- ================= HERO ================= -->
+  <section id="hero" class="jf-hero">
+    <div class="jf-container">
+      <div class="jf-grid-2" style="align-items: center !important;">
+        
+        <!-- Left Hero Copy -->
+        <div>
+          <span class="jf-badge-gold">FOR INVESTORS, DIASPORA & AGRIPRENEURS</span>
+          
+          <h1 class="jf-hero-h1" style="font-size: 42px !important; color: #ffffff !important; margin-bottom: 20px !important;">
+            Build a High-Yield <span style="color: #fbbf24 !important;">Agricultural Legacy</span> in Kwara State.
+          </h1>
+
+          <p style="font-size: 16px !important; color: #dcfce7 !important; line-height: 1.7 !important; margin-bottom: 26px !important;">
+            We engineer, set up, and manage world-class turnkey arable, livestock, and mechanized farms in Nigeria’s most fertile agricultural corridor—guaranteeing peace of mind, operational precision, and sustainable profitability.
+          </p>
+
+          <!-- 3 Quick Value Props -->
+          <div style="display: grid !important; grid-template-columns: repeat(3, 1fr) !important; gap: 10px !important; margin-bottom: 28px !important;">
+            <div style="background-color: #0d4222 !important; border: 1px solid #166534 !important; padding: 12px !important; border-radius: 12px !important;">
+              <strong style="color: #fbbf24 !important; display: block !important; font-size: 13px !important;">100% Turnkey</strong>
+              <span style="font-size: 11px !important; color: #86efac !important;">Zero operational stress</span>
+            </div>
+            <div style="background-color: #0d4222 !important; border: 1px solid #166534 !important; padding: 12px !important; border-radius: 12px !important;">
+              <strong style="color: #fbbf24 !important; display: block !important; font-size: 13px !important;">Kwara Hub</strong>
+              <span style="font-size: 11px !important; color: #86efac !important;">Rich soil & water basin</span>
+            </div>
+            <div style="background-color: #0d4222 !important; border: 1px solid #166534 !important; padding: 12px !important; border-radius: 12px !important;">
+              <strong style="color: #fbbf24 !important; display: block !important; font-size: 13px !important;">Elite Fleet</strong>
+              <span style="font-size: 11px !important; color: #86efac !important;">Tractors & irrigation</span>
+            </div>
+          </div>
+
+          <!-- CTA Buttons -->
+          <div class="jf-hero-btns" style="display: flex !important; gap: 12px !important; flex-wrap: wrap !important;">
+            <a href="javascript:void(0)" onclick="jfScrollTo('consultation-form')" class="jf-btn-gold" style="font-size: 15px !important;">
+              Schedule Farm Setup Briefing →
+            </a>
+            <a href="javascript:void(0)" onclick="jfOpenWhatsApp()" class="jf-btn-dark" style="font-size: 15px !important;">
+              Call / WhatsApp: 08033106047
+            </a>
+          </div>
+        </div>
+
+        <!-- Right Hero Image -->
+        <div>
+          <div style="border-radius: 24px !important; overflow: hidden !important; border: 2px solid #166534 !important; box-shadow: 0 20px 40px rgba(0,0,0,0.5) !important;">
+            <img 
+              src="https://images.unsplash.com/photo-1500937386664-56d1dfef3854?auto=format&fit=crop&w=1000&q=80" 
+              alt="JAYTECH FARMS Commercial Farmland" 
+              style="width: 100% !important; height: 360px !important; object-fit: cover !important; display: block !important;"
+            />
+            <div style="background-color: #031c0e !important; padding: 18px 20px !important; border-top: 1px solid #166534 !important;">
+              <div style="color: #fbbf24 !important; font-size: 11px !important; font-weight: 800 !important; text-transform: uppercase !important; margin-bottom: 4px !important;">
+                Kwara Strategic Agro-Corridor
+              </div>
+              <div style="color: #ffffff !important; font-size: 15px !important; font-weight: 700 !important; margin-bottom: 4px !important;">
+                Engineered for Maximum Commercial Yield
+              </div>
+              <div style="color: #86efac !important; font-size: 12px !important;">
+                Bespoke arable farming, mechanized tractorization, high-yield seed propagation, and elite livestock infrastructure across Kwara State.
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ================= PROBLEM & PROMISE ================= -->
+  <section id="problem-promise" style="background-color: #f0fdf4 !important; padding: 70px 0 !important;">
+    <div class="jf-container">
+      
+      <div style="text-align: center !important; max-width: 750px !important; margin: 0 auto 40px auto !important;">
+        <span class="jf-badge-gold" style="background-color: #052e16 !important; color: #fbbf24 !important; border: none !important;">
+          THE REALITY OF AGRIBUSINESS IN NIGERIA
+        </span>
+        <h2 style="font-size: 32px !important; color: #052e16 !important; margin-bottom: 12px !important;">
+          Agriculture is the Safest Wealth Generator—If Done Right.
+        </h2>
+        <p style="font-size: 15px !important; color: #166534 !important;">
+          Thousands of investors lose money to untrusted remote managers, uncertified seeds, and fragmented logistics. JAYTECH FARMS eliminates every single point of failure.
+        </p>
+      </div>
+
+      <div class="jf-grid-4">
+        
+        <div class="jf-card-light">
+          <div style="font-size: 26px !important; margin-bottom: 8px !important;">⚠️</div>
+          <h3 style="font-size: 17px !important; color: #052e16 !important; margin-bottom: 6px !important;">Remote Management</h3>
+          <p style="font-size: 13px !important; color: #166534 !important;">We replace unreliable caretakers with professional agronomist oversight and structured progress updates.</p>
+        </div>
+
+        <div class="jf-card-light">
+          <div style="font-size: 26px !important; margin-bottom: 8px !important;">⚠️</div>
+          <h3 style="font-size: 17px !important; color: #052e16 !important; margin-bottom: 6px !important;">Soil & Seed Matching</h3>
+          <p style="font-size: 13px !important; color: #166534 !important;">Laboratory soil nutrient analysis paired with certified disease-resistant hybrid seed varieties.</p>
+        </div>
+
+        <div class="jf-card-light">
+          <div style="font-size: 26px !important; margin-bottom: 8px !important;">⚠️</div>
+          <h3 style="font-size: 17px !important; color: #052e16 !important; margin-bottom: 6px !important;">Modern Mechanization</h3>
+          <p style="font-size: 13px !important; color: #166534 !important;">Tractorization, laser land clearing, and solar drip irrigation systems built for commercial speed.</p>
+        </div>
+
+        <div class="jf-card-light">
+          <div style="font-size: 26px !important; margin-bottom: 8px !important;">⚠️</div>
+          <h3 style="font-size: 17px !important; color: #052e16 !important; margin-bottom: 6px !important;">Guaranteed Off-take</h3>
+          <p style="font-size: 13px !important; color: #166534 !important;">Direct logistics corridors to industrial food processors in Lagos, Abuja, and Ibadan.</p>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ================= 5 SIGNATURE SERVICES ================= -->
+  <section id="services" style="background-color: #ffffff !important; padding: 75px 0 !important;">
+    <div class="jf-container">
+      
+      <div style="text-align: center !important; max-width: 700px !important; margin: 0 auto 40px auto !important;">
+        <span class="jf-badge-gold" style="background-color: rgba(245, 158, 11, 0.15) !important; color: #b45309 !important; border: 1px solid #f59e0b !important;">
+          OUR SIGNATURE SERVICES
+        </span>
+        <h2 style="font-size: 32px !important; color: #052e16 !important; margin-bottom: 12px !important;">
+          The 5 Pillars of Elite Agribusiness
+        </h2>
+        <p style="font-size: 15px !important; color: #166534 !important;">
+          We offer complete turnkey agricultural engineering solutions designed for maximum commercial profitability.
+        </p>
+      </div>
+
+      <div class="jf-grid-3">
+        
+        <div class="jf-card-dark">
+          <span style="color: #fbbf24 !important; font-size: 11px !important; font-weight: 800 !important; text-transform: uppercase !important; display: block !important; margin-bottom: 8px !important;">Pillar 01</span>
+          <h3 style="font-size: 20px !important; color: #ffffff !important; margin-bottom: 10px !important;">Bespoke Arable Farming</h3>
+          <p style="font-size: 13px !important; color: #bbf7d0 !important; line-height: 1.6 !important; margin-bottom: 16px !important;">
+            Cassava, Maize, Soya, Vegetables & Grains with laboratory soil testing and solar-powered drip irrigation setups.
+          </p>
+          <strong style="color: #fbbf24 !important; font-size: 12px !important;">✓ High-Density Commercial Yield</strong>
+        </div>
+
+        <div class="jf-card-dark">
+          <span style="color: #fbbf24 !important; font-size: 11px !important; font-weight: 800 !important; text-transform: uppercase !important; display: block !important; margin-bottom: 8px !important;">Pillar 02</span>
+          <h3 style="font-size: 20px !important; color: #ffffff !important; margin-bottom: 10px !important;">Elite Livestock Setups</h3>
+          <p style="font-size: 13px !important; color: #bbf7d0 !important; line-height: 1.6 !important; margin-bottom: 16px !important;">
+            Bio-secure poultry battery cages, automated piggery pens, cattle feedlots, and recirculating aquaculture (RAS) fishery.
+          </p>
+          <strong style="color: #fbbf24 !important; font-size: 12px !important;">✓ Zero-Mortality Bio-Security</strong>
+        </div>
+
+        <div class="jf-card-dark">
+          <span style="color: #fbbf24 !important; font-size: 11px !important; font-weight: 800 !important; text-transform: uppercase !important; display: block !important; margin-bottom: 8px !important;">Pillar 03</span>
+          <h3 style="font-size: 20px !important; color: #ffffff !important; margin-bottom: 10px !important;">Advanced Mechanization</h3>
+          <p style="font-size: 13px !important; color: #bbf7d0 !important; line-height: 1.6 !important; margin-bottom: 16px !important;">
+            Tractorization services, laser land clearing, automated seed planting, boom spraying, and combine harvesting.
+          </p>
+          <strong style="color: #fbbf24 !important; font-size: 12px !important;">✓ Industrial Tractor Fleets</strong>
+        </div>
+
+        <div class="jf-card-dark">
+          <span style="color: #fbbf24 !important; font-size: 11px !important; font-weight: 800 !important; text-transform: uppercase !important; display: block !important; margin-bottom: 8px !important;">Pillar 04</span>
+          <h3 style="font-size: 20px !important; color: #ffffff !important; margin-bottom: 10px !important;">Premium Seeds & Seedlings</h3>
+          <p style="font-size: 13px !important; color: #bbf7d0 !important; line-height: 1.6 !important; margin-bottom: 16px !important;">
+            Certified high-germination hybrid seeds, grafted cashew, dwarf oil palm seedlings, and disease-resistant cassava stems.
+          </p>
+          <strong style="color: #fbbf24 !important; font-size: 12px !important;">✓ Certified Kwara Soil Varieties</strong>
+        </div>
+
+        <div class="jf-card-dark">
+          <span style="color: #fbbf24 !important; font-size: 11px !important; font-weight: 800 !important; text-transform: uppercase !important; display: block !important; margin-bottom: 8px !important;">Pillar 05</span>
+          <h3 style="font-size: 20px !important; color: #ffffff !important; margin-bottom: 10px !important;">Produce Logistics & Off-take</h3>
+          <p style="font-size: 13px !important; color: #bbf7d0 !important; line-height: 1.6 !important; margin-bottom: 16px !important;">
+            Direct logistics connecting farm-gate produce directly to major industrial food processors in Lagos, Abuja, and Ibadan.
+          </p>
+          <strong style="color: #fbbf24 !important; font-size: 12px !important;">✓ Direct Factory Off-take Links</strong>
+        </div>
+
+        <div class="jf-card-light" style="background-color: #f0fdf4 !important; border: 2px dashed #16a34a !important; display: flex !important; flex-direction: column !important; justify-content: space-between !important;">
+          <div>
+            <span style="color: #166534 !important; font-size: 11px !important; font-weight: 800 !important; text-transform: uppercase !important; display: block !important; margin-bottom: 8px !important;">Custom Project</span>
+            <h3 style="font-size: 20px !important; color: #052e16 !important; margin-bottom: 10px !important;">Ready to Start Your Farm?</h3>
+            <p style="font-size: 13px !important; color: #166534 !important; line-height: 1.6 !important;">
+              Speak with our senior agricultural engineers to structure a custom setup blueprint tailored to your investment budget.
+            </p>
+          </div>
+          <a href="javascript:void(0)" onclick="jfScrollTo('consultation-form')" class="jf-btn-gold" style="margin-top: 20px !important; width: 100% !important;">
+            Request Farm Setup Briefing →
+          </a>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ================= KWARA ADVANTAGE ================= -->
+  <section id="kwara-advantage" style="background-color: #052e16 !important; padding: 75px 0 !important; color: #ffffff !important;">
+    <div class="jf-container">
+      
+      <div style="text-align: center !important; max-width: 750px !important; margin: 0 auto 40px auto !important;">
+        <span class="jf-badge-gold">THE KWARA ADVANTAGE</span>
+        <h2 style="font-size: 32px !important; color: #ffffff !important; margin-bottom: 12px !important;">
+          Why Kwara State is Nigeria's Agribusiness Goldmine
+        </h2>
+        <p style="font-size: 15px !important; color: #86efac !important;">
+          Located in Nigeria's middle-belt transition corridor with virgin fertile soil, abundant river tributaries, and rapid highway access to top food markets.
+        </p>
+      </div>
+
+      <div class="jf-grid-3">
+        
+        <div class="jf-card-dark">
+          <div style="font-size: 28px !important; margin-bottom: 10px !important;">🌱</div>
+          <h3 style="font-size: 18px !important; color: #ffffff !important; margin-bottom: 6px !important;">Virgin Fertile Arable Land</h3>
+          <p style="font-size: 13px !important; color: #86efac !important; line-height: 1.6 !important;">
+            Rich alluvial and loamy soil profiles with ideal organic density, capable of sustaining diverse commercial cash crops year-round.
+          </p>
+        </div>
+
+        <div class="jf-card-dark">
+          <div style="font-size: 28px !important; margin-bottom: 10px !important;">💧</div>
+          <h3 style="font-size: 18px !important; color: #ffffff !important; margin-bottom: 6px !important;">Abundant River Basins</h3>
+          <p style="font-size: 13px !important; color: #86efac !important; line-height: 1.6 !important;">
+            Direct proximity to the River Niger basin and tributaries, enabling low-cost, year-round solar irrigation and high water tables.
+          </p>
+        </div>
+
+        <div class="jf-card-dark">
+          <div style="font-size: 28px !important; margin-bottom: 10px !important;">🚛</div>
+          <h3 style="font-size: 18px !important; color: #ffffff !important; margin-bottom: 6px !important;">Strategic Gateway Logistics</h3>
+          <p style="font-size: 13px !important; color: #86efac !important; line-height: 1.6 !important;">
+            Fast distribution transit times: Lagos (4-5 hrs), Abuja (4-5 hrs), Ibadan (2.5 hrs). Lowest post-harvest losses.
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ================= HOW WE WORK ================= -->
+  <section id="how-we-work" style="background-color: #f0fdf4 !important; padding: 75px 0 !important;">
+    <div class="jf-container">
+      
+      <div style="text-align: center !important; max-width: 700px !important; margin: 0 auto 40px auto !important;">
+        <span class="jf-badge-gold" style="background-color: #052e16 !important; color: #fbbf24 !important; border: none !important;">
+          THE 4-STEP PROCESS
+        </span>
+        <h2 style="font-size: 32px !important; color: #052e16 !important; margin-bottom: 12px !important;">
+          How We Build Your Turnkey Farm
+        </h2>
+      </div>
+
+      <div class="jf-grid-4">
+        
+        <div class="jf-card-light">
+          <div style="font-family: 'Playfair Display', serif !important; font-size: 26px !important; font-weight: 900 !important; color: #f59e0b !important; margin-bottom: 6px !important;">01</div>
+          <h3 style="font-size: 16px !important; color: #052e16 !important; margin-bottom: 6px !important;">Discovery</h3>
+          <p style="font-size: 13px !important; color: #166534 !important;">We align on crop preferences, livestock scale, and capital investment goals.</p>
+        </div>
+
+        <div class="jf-card-light">
+          <div style="font-family: 'Playfair Display', serif !important; font-size: 26px !important; font-weight: 900 !important; color: #f59e0b !important; margin-bottom: 6px !important;">02</div>
+          <h3 style="font-size: 16px !important; color: #052e16 !important; margin-bottom: 6px !important;">Feasibility & Soil Test</h3>
+          <p style="font-size: 13px !important; color: #166534 !important;">Laboratory soil chemical profiling, borehole water tests, and architectural blueprints.</p>
+        </div>
+
+        <div class="jf-card-light">
+          <div style="font-family: 'Playfair Display', serif !important; font-size: 26px !important; font-weight: 900 !important; color: #f59e0b !important; margin-bottom: 6px !important;">03</div>
+          <h3 style="font-size: 16px !important; color: #052e16 !important; margin-bottom: 6px !important;">Precision Setup</h3>
+          <p style="font-size: 13px !important; color: #166534 !important;">Land clearing, tractorization, solar irrigation, and bio-secure livestock pen construction.</p>
+        </div>
+
+        <div class="jf-card-light">
+          <div style="font-family: 'Playfair Display', serif !important; font-size: 26px !important; font-weight: 900 !important; color: #f59e0b !important; margin-bottom: 6px !important;">04</div>
+          <h3 style="font-size: 16px !important; color: #052e16 !important; margin-bottom: 6px !important;">Handover & Off-take</h3>
+          <p style="font-size: 13px !important; color: #166534 !important;">Staff deployment, diaspora reporting dashboard, and farm-gate produce off-take.</p>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ================= YIELD ESTIMATOR ================= -->
+  <section id="roi-calculator" style="background-color: #ffffff !important; padding: 75px 0 !important;">
+    <div class="jf-container" style="max-width: 900px !important;">
+      
+      <div style="text-align: center !important; margin-bottom: 35px !important;">
+        <h2 style="font-size: 32px !important; color: #052e16 !important; margin-bottom: 10px !important;">
+          Agribusiness Investment Yield Estimator
+        </h2>
+        <p style="font-size: 14px !important; color: #166534 !important;">
+          Select your target scale and venture type to preview estimated execution timelines and returns in Kwara State.
+        </p>
+      </div>
+
+      <div class="jf-card-dark" style="padding: 32px !important;">
+        <div class="jf-grid-2" style="align-items: center !important;">
+          
+          <div>
+            <div class="jf-form-group">
+              <label>1. Target Land Scale</label>
+              <select id="jf-scale" onchange="jfUpdateEstimator()" class="jf-input">
+                <option value="small">Smallholder (1 – 5 Acres)</option>
+                <option value="medium" selected>Commercial (5 – 50 Acres)</option>
+                <option value="large">Industrial Estate (50+ Acres)</option>
+              </select>
+            </div>
+
+            <div class="jf-form-group">
+              <label>2. Venture Sector Focus</label>
+              <select id="jf-sector" onchange="jfUpdateEstimator()" class="jf-input">
+                <option value="arable">Arable Crops (Cassava, Maize, Vegs)</option>
+                <option value="livestock">Elite Livestock (Poultry, Piggery, Fish)</option>
+                <option value="integrated" selected>Integrated Crop & Livestock</option>
+              </select>
+            </div>
+          </div>
+
+          <div style="background-color: #031c0e !important; border: 1px solid #166534 !important; border-radius: 16px !important; padding: 24px !important;">
+            <div style="display: flex !important; justify-content: space-between !important; border-bottom: 1px solid #166534 !important; padding-bottom: 10px !important; margin-bottom: 14px !important;">
+              <span style="font-size: 12px !important; color: #86efac !important; font-weight: 700 !important; text-transform: uppercase !important;">Execution Timeline</span>
+              <strong id="jf-calc-time" style="color: #fbbf24 !important; font-size: 14px !important;">60 – 90 Days</strong>
+            </div>
+
+            <div style="margin-bottom: 18px !important;">
+              <span style="font-size: 11px !important; color: #86efac !important; text-transform: uppercase !important; display: block !important;">Projected Annual Yield</span>
+              <div id="jf-calc-yield" style="font-family: 'Playfair Display', serif !important; font-size: 26px !important; color: #fbbf24 !important; font-weight: 800 !important;">
+                35% – 55% Annualized
+              </div>
+            </div>
+
+            <a href="javascript:void(0)" onclick="jfScrollTo('consultation-form')" class="jf-btn-gold" style="width: 100% !important; font-size: 13px !important; padding: 12px !important;">
+              Request Feasibility Report →
+            </a>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ================= CONSULTATION QUESTIONNAIRE FORM ================= -->
+  <section id="consultation-form" style="background-color: #052e16 !important; padding: 75px 0 !important; color: #ffffff !important;">
+    <div class="jf-container" style="max-width: 800px !important;">
+      
+      <div style="text-align: center !important; margin-bottom: 35px !important;">
+        <span class="jf-badge-gold">EXECUTIVE BRIEFING</span>
+        <h2 style="font-size: 32px !important; color: #ffffff !important; margin-bottom: 10px !important;">
+          JAYTECH FARMS Consultation Questionnaire
+        </h2>
+        <p style="font-size: 14px !important; color: #86efac !important; max-width: 600px !important; margin: 0 auto !important;">
+          Fill out this brief questionnaire. One of our Senior Agribusiness Engineers will review your brief and contact you within 24 hours.
+        </p>
+      </div>
+
+      <!-- Success Confirmation Box -->
+      <div id="jf-success-box" style="display: none; background-color: #0d4222 !important; border: 2px solid #16a34a !important; border-radius: 24px !important; padding: 36px !important; text-align: center !important;">
+        <div style="width: 54px !important; height: 54px !important; background-color: #fbbf24 !important; color: #052e16 !important; border-radius: 50% !important; font-size: 26px !important; font-weight: 900 !important; display: flex !important; align-items: center !important; justify-content: center !important; margin: 0 auto 16px auto !important;">✓</div>
+        <h3 style="font-size: 24px !important; color: #ffffff !important; margin-bottom: 8px !important;">Consultation Brief Received!</h3>
+        <p style="font-size: 14px !important; color: #dcfce7 !important; margin-bottom: 22px !important;">
+          Your details have been synced to our agronomist Google Sheet. Click below to continue on WhatsApp with priority VIP review:
+        </p>
+        <a id="jf-wa-link" href="https://wa.me/2348033106047" target="_blank" class="jf-btn-gold" style="font-size: 15px !important; padding: 15px 30px !important;">
+          Open WhatsApp Briefing (08033106047) →
+        </a>
+      </div>
+
+      <!-- Main Form -->
+      <form id="jf-form" onsubmit="jfSubmitForm(event)" class="jf-card-dark" style="padding: 32px !important;">
+        
+        <div class="jf-grid-2" style="gap: 16px !important;">
+          <div class="jf-form-group">
+            <label>Full Name *</label>
+            <input type="text" id="jf-name" required placeholder="e.g. Dr. Babatunde Adeleke" class="jf-input" />
+          </div>
+
+          <div class="jf-form-group">
+            <label>Company / Organization</label>
+            <input type="text" id="jf-company" placeholder="e.g. Adeleke Agri-Holdings Ltd." class="jf-input" />
+          </div>
+
+          <div class="jf-form-group">
+            <label>Email Address *</label>
+            <input type="email" id="jf-email" required placeholder="adeleke@domain.com" class="jf-input" />
+          </div>
+
+          <div class="jf-form-group">
+            <label>WhatsApp / Phone *</label>
+            <input type="tel" id="jf-phone" required placeholder="e.g. 08012345678" class="jf-input" />
+          </div>
+        </div>
+
+        <div class="jf-form-group">
+          <label>Current Location / Country of Residence *</label>
+          <input type="text" id="jf-location" required placeholder="e.g. Lagos, Nigeria / United Kingdom / United States" class="jf-input" />
+        </div>
+
+        <div class="jf-grid-2" style="gap: 16px !important;">
+          <div class="jf-form-group">
+            <label>Target Budget Bracket</label>
+            <select id="jf-budget" class="jf-input">
+              <option>₦5 Million – ₦15 Million</option>
+              <option selected>₦15 Million – ₦50 Million</option>
+              <option>₦50 Million – ₦100 Million</option>
+              <option>₦100 Million+ Commercial</option>
+            </select>
+          </div>
+
+          <div class="jf-form-group">
+            <label>Implementation Timeline</label>
+            <select id="jf-timeline" class="jf-input">
+              <option selected>Immediately (Within 30 days)</option>
+              <option>1 – 3 Months</option>
+              <option>3 – 6 Months</option>
+              <option>Planning Phase</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="jf-form-group">
+          <label>Additional Project Details</label>
+          <textarea id="jf-details" rows="3" placeholder="Tell us about preferred crops, livestock scale, or specific land requirements in Kwara State..." class="jf-input" style="height: 85px !important;"></textarea>
+        </div>
+
+        <button type="submit" id="jf-submit-btn" class="jf-btn-gold" style="width: 100% !important; font-size: 15px !important; padding: 15px !important; margin-top: 10px !important;">
+          SUBMIT BRIEF & SCHEDULE CONSULTATION →
+        </button>
+      </form>
+
+    </div>
+  </section>
+
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="jf-footer">
+    <div class="jf-container">
+      <div class="jf-grid-3" style="margin-bottom: 25px !important;">
+        
+        <div>
+          <h4 style="font-size: 18px !important; color: #fbbf24 !important; margin-bottom: 8px !important;">JAYTECH FARMS</h4>
+          <p style="font-size: 12px !important; color: #86efac !important; line-height: 1.6 !important;">
+            Turnkey Agribusiness Engineering & Commercial Farmland Development in Kwara State, Nigeria.
+          </p>
+        </div>
+
+        <div>
+          <h4 style="font-size: 13px !important; color: #ffffff !important; margin-bottom: 8px !important; text-transform: uppercase !important;">Direct Contacts</h4>
+          <p style="font-size: 12px !important; color: #dcfce7 !important; margin-bottom: 4px !important;"><strong>WhatsApp:</strong> 08033106047 (+234 803 310 6047)</p>
+          <p style="font-size: 12px !important; color: #dcfce7 !important; margin-bottom: 4px !important;"><strong>Call:</strong> 09158260545 (+234 915 826 0545)</p>
+          <p style="font-size: 12px !important; color: #dcfce7 !important;"><strong>Email:</strong> jayebabasammy@gmail.com</p>
+        </div>
+
+        <div style="text-align: right !important;">
+          <p style="font-size: 12px !important; color: #86efac !important;">
+            © 2026 JAYTECH FARMS.<br>All rights reserved.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </footer>
+
+</div>
+
+<!-- ================= JAVASCRIPT ENGINE ================= -->
+<script>
+  var JF_GOOGLE_SCRIPT = "https://script.google.com/macros/s/AKfycbyHSOC6QaYuTbRH8C2NN-xahi0qijj9rq-31TUZWP0hLpkLsE-Bz1WiE5OnrRTtveFWiw/exec";
+
+  // Ultra-Fast & Smooth Scroll Handler
+  function jfScrollTo(targetId) {
+    var targetEl = document.getElementById(targetId);
+    if (targetEl) {
+      var headerOffset = 80;
+      var elementPosition = targetEl.getBoundingClientRect().top;
+      var offsetPosition = elementPosition + (window.pageYOffset || document.documentElement.scrollTop) - headerOffset;
+      
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: "smooth"
+      });
+    }
+    return false;
+  }
+
+  // Instant WhatsApp Launcher
+  function jfOpenWhatsApp(customMessage) {
+    var msg = customMessage || "Hello JAYTECH FARMS, I am interested in a turnkey farm setup in Kwara State.";
+    var url = "https://wa.me/2348033106047?text=" + encodeURIComponent(msg);
+    window.open(url, '_blank');
+    return false;
+  }
+
+  // Interactive Yield Estimator
+  function jfUpdateEstimator() {
+    var scale = document.getElementById('jf-scale').value;
+    var sector = document.getElementById('jf-sector').value;
+    var timeElem = document.getElementById('jf-calc-time');
+    var yieldElem = document.getElementById('jf-calc-yield');
+
+    if (scale === 'small') {
+      timeElem.innerText = "30 – 45 Days";
+      yieldElem.innerText = sector === 'arable' ? "30% – 45% Annualized" : "35% – 50% Annualized";
+    } else if (scale === 'medium') {
+      timeElem.innerText = "60 – 90 Days";
+      yieldElem.innerText = sector === 'integrated' ? "35% – 55% Annualized" : "30% – 50% Annualized";
+    } else {
+      timeElem.innerText = "90 – 120 Days";
+      yieldElem.innerText = "40% – 60% Annualized";
+    }
+  }
+
+  // Consultation Brief Submission
+  function jfSubmitForm(e) {
+    e.preventDefault();
+    var btn = document.getElementById('jf-submit-btn');
+    btn.innerText = "Submitting Brief...";
+    btn.disabled = true;
+
+    var data = {
+      id: "LEAD-" + Date.now(),
+      fullName: document.getElementById('jf-name').value,
+      companyName: document.getElementById('jf-company').value || "N/A",
+      email: document.getElementById('jf-email').value,
+      phone: document.getElementById('jf-phone').value,
+      location: document.getElementById('jf-location').value,
+      budget: document.getElementById('jf-budget').value,
+      timeline: document.getElementById('jf-timeline').value,
+      additionalDetails: document.getElementById('jf-details').value || "N/A"
+    };
+
+    var waText = "🌿 *JAYTECH FARMS - CONSULTATION BRIEF* 🌿\n\n" +
+      "👤 *Name:* " + data.fullName + "\n" +
+      "🏢 *Company:* " + data.companyName + "\n" +
+      "📞 *Phone/WhatsApp:* " + data.phone + "\n" +
+      "📍 *Location:* " + data.location + "\n" +
+      "💰 *Budget:* " + data.budget + "\n" +
+      "⏳ *Timeline:* " + data.timeline + "\n" +
+      "📝 *Notes:* " + data.additionalDetails;
+
+    var waUrl = "https://wa.me/2348033106047?text=" + encodeURIComponent(waText);
+
+    // Send data to Google Sheet Apps Script
+    fetch(JF_GOOGLE_SCRIPT, {
+      method: 'POST',
+      mode: 'no-cors',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(data)
+    }).catch(function(err) { console.log(err); });
+
+    // Show Confirmation Box
+    document.getElementById('jf-form').style.display = 'none';
+    document.getElementById('jf-success-box').style.display = 'block';
+    document.getElementById('jf-wa-link').href = waUrl;
+
+    // Scroll to success box
+    jfScrollTo('consultation-form');
+
+    // Auto-open WhatsApp
+    setTimeout(function() {
+      window.open(waUrl, '_blank');
+    }, 700);
+  }
+</script>

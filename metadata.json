@@ -1,0 +1,6 @@
+{
+  "name": "JAYTECH FARMS | Premium Agribusiness Setup & Turnkey Farms",
+  "description": "Turnkey agricultural setup and farm management sales portal for JAYTECH FARMS in Kwara State, Nigeria, featuring automated consultation questionnaires, instant WhatsApp client briefings, and Google Sheets integration scripts.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

@@ -1,0 +1,1193 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>JAYTECH FARMS | High-Yield Turnkey Agribusiness Engineering</title>
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;0,800;0,900;1,600;1,700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            serif: ['"Playfair Display"', 'serif'],
+          },
+          colors: {
+            emerald: {
+              50: '#f0fdf4',
+              100: '#dcfce7',
+              200: '#bbf7d0',
+              300: '#86efac',
+              400: '#4ade80',
+              500: '#22c55e',
+              600: '#16a34a',
+              700: '#15803d',
+              800: '#166534',
+              900: '#14532d',
+              950: '#052e16',
+            },
+            amber: {
+              300: '#fcd34d',
+              400: '#fbbf24',
+              500: '#f59e0b',
+              600: '#d97706',
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Isolation & Reset Styles to override systeme.io default styles -->
+  <style>
+    /* Reset and scope isolation */
+    #jaytech-container {
+      font-family: "Plus Jakarta Sans", sans-serif !important;
+      color: #052e16;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      width: 100% !important;
+      margin: 0 !important;
+      padding: 0 !important;
+      box-sizing: border-box !important;
+    }
+    #jaytech-container * {
+      box-sizing: border-box !important;
+    }
+    #jaytech-container h1, 
+    #jaytech-container h2, 
+    #jaytech-container h3, 
+    #jaytech-container h4 {
+      font-family: "Playfair Display", serif !important;
+      letter-spacing: -0.02em;
+    }
+    .no-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+    .no-scrollbar {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+    @keyframes pulse-subtle {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.05); }
+    }
+    .animate-pulse-subtle {
+      animation: pulse-subtle 3s ease-in-out infinite;
+    }
+  </style>
+</head>
+<body class="bg-white text-emerald-950 m-0 p-0 overflow-x-hidden">
+
+<div id="jaytech-container" class="min-h-screen bg-white">
+
+  <!-- ================= TOP NAVIGATION HEADER ================= -->
+  <header class="sticky top-0 z-50 bg-emerald-950/95 backdrop-blur-md border-b border-emerald-800/80 text-white transition-all">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        
+        <!-- Logo Branding -->
+        <a href="#hero" class="flex items-center gap-3 group text-decoration-none">
+          <div class="w-11 h-11 rounded-xl bg-gradient-to-br from-amber-400 via-amber-500 to-emerald-600 p-0.5 shadow-lg shadow-amber-500/10">
+            <div class="w-full h-full bg-emerald-950 rounded-[10px] flex items-center justify-center">
+              <span class="font-extrabold text-amber-400 text-xl tracking-wider">JF</span>
+            </div>
+          </div>
+          <div class="flex flex-col">
+            <div class="flex items-center gap-1.5">
+              <span class="font-serif font-bold text-xl sm:text-2xl text-white tracking-tight group-hover:text-amber-400 transition-colors">
+                JAYTECH FARMS
+              </span>
+              <span class="text-[10px] font-semibold uppercase tracking-widest bg-amber-400/20 text-amber-300 px-1.5 py-0.5 rounded border border-amber-400/30 hidden sm:inline-block">
+                Turnkey
+              </span>
+            </div>
+            <span class="text-[11px] text-emerald-300/80 tracking-wide font-light hidden sm:block">
+              JAYTECH FARMS Agribusiness Engineering
+            </span>
+          </div>
+        </a>
+
+        <!-- Desktop Navigation Links -->
+        <nav class="hidden lg:flex items-center gap-6 text-xs sm:text-sm font-medium text-emerald-200">
+          <a href="#problem-promise" class="hover:text-amber-400 transition-colors">Why Turnkey</a>
+          <a href="#services" class="hover:text-amber-400 transition-colors">Signature Services</a>
+          <a href="#kwara-advantage" class="hover:text-amber-400 transition-colors">Kwara Advantage</a>
+          <a href="#how-we-work" class="hover:text-amber-400 transition-colors">How We Work</a>
+          <a href="#roi-calculator" class="hover:text-amber-400 transition-colors">Yield Estimator</a>
+        </nav>
+
+        <!-- Action CTAs -->
+        <div class="hidden sm:flex items-center gap-3">
+          <a
+            href="https://wa.me/2348033106047?text=Hello%20JAYTECH%20FARMS%2C%20I%20would%20like%20to%20discuss%20a%20turnkey%20agricultural%20setup%20in%20Kwara%20State."
+            target="_blank"
+            rel="noopener noreferrer"
+            class="flex items-center gap-1.5 px-3.5 py-2 text-xs font-semibold rounded-xl bg-emerald-900/80 hover:bg-emerald-900 text-emerald-200 border border-emerald-700/60 transition-all hover:border-amber-400"
+          >
+            <svg class="w-4 h-4 text-amber-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
+            <span>08033106047</span>
+          </a>
+
+          <a
+            href="#consultation-form"
+            class="px-5 py-2.5 rounded-xl bg-gradient-to-r from-amber-400 to-amber-500 hover:from-amber-300 hover:to-amber-400 text-emerald-950 font-bold text-xs sm:text-sm shadow-md shadow-amber-500/10 transition-all cursor-pointer transform hover:-translate-y-0.5"
+          >
+            Book Consultation
+          </a>
+        </div>
+
+        <!-- Mobile Menu Toggle -->
+        <button
+          id="mobile-menu-btn"
+          type="button"
+          class="lg:hidden p-2 rounded-lg bg-emerald-900 text-emerald-200 hover:text-white"
+          aria-label="Toggle menu"
+          onclick="toggleMobileMenu()"
+        >
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+        </button>
+
+      </div>
+    </div>
+
+    <!-- Mobile Drawer -->
+    <div id="mobile-menu" class="hidden lg:hidden bg-emerald-950 border-b border-emerald-800 px-4 pt-3 pb-6 space-y-3">
+      <nav class="flex flex-col gap-2.5 text-sm font-medium text-emerald-200">
+        <a href="#problem-promise" onclick="toggleMobileMenu()" class="py-2 border-b border-emerald-900">Why Turnkey</a>
+        <a href="#services" onclick="toggleMobileMenu()" class="py-2 border-b border-emerald-900">Signature Services</a>
+        <a href="#kwara-advantage" onclick="toggleMobileMenu()" class="py-2 border-b border-emerald-900">Kwara Advantage</a>
+        <a href="#how-we-work" onclick="toggleMobileMenu()" class="py-2 border-b border-emerald-900">How We Work</a>
+        <a href="#roi-calculator" onclick="toggleMobileMenu()" class="py-2 border-b border-emerald-900">Yield Estimator</a>
+        <a href="#consultation-form" onclick="toggleMobileMenu()" class="py-2.5 text-amber-400 font-bold">Book Consultation Questionnaire</a>
+      </nav>
+    </div>
+  </header>
+
+
+  <!-- ================= HERO SECTION ================= -->
+  <section id="hero" class="relative bg-emerald-950 text-white overflow-hidden py-16 sm:py-24 lg:py-32">
+    <!-- Ambient Background Gradients -->
+    <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-emerald-800/40 via-emerald-950 to-emerald-950"></div>
+    <div class="absolute -top-24 -left-24 w-96 h-96 bg-amber-500/10 rounded-full blur-3xl pointer-events-none"></div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+        
+        <!-- Left Hero Copy -->
+        <div class="lg:col-span-7 space-y-6 text-left">
+          
+          <!-- Pre-headline -->
+          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-amber-400/15 border border-amber-400/30 text-amber-300 text-xs font-bold tracking-wide uppercase">
+            <svg class="w-4 h-4 text-amber-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z"></path></svg>
+            <span>FOR VISIONARY INVESTORS, DIASPORA PATRIOTS & AGRIPRENEURS</span>
+          </div>
+
+          <!-- Main Headline -->
+          <h1 class="font-serif text-3xl sm:text-5xl lg:text-6xl font-extrabold text-white tracking-tight leading-[1.15]">
+            Build a High-Yield <span class="text-transparent bg-clip-text bg-gradient-to-r from-amber-300 via-amber-400 to-amber-200">Agricultural Legacy</span> in Kwara State.
+          </h1>
+
+          <!-- Sub-headline -->
+          <p class="text-base sm:text-lg lg:text-xl text-emerald-100/90 font-light leading-relaxed max-w-2xl">
+            We engineer, set up, and manage world-class turnkey arable, livestock, and mechanized farms in Nigeria’s most fertile agricultural corridor—guaranteeing peace of mind, operational precision, and sustainable profitability.
+          </p>
+
+          <!-- Value Badges -->
+          <div class="grid grid-cols-2 sm:grid-cols-3 gap-3 pt-2">
+            <div class="bg-emerald-900/60 border border-emerald-800 p-3 rounded-xl">
+              <span class="text-amber-400 font-bold block text-sm sm:text-base">100% Turnkey</span>
+              <span class="text-emerald-300 text-xs">Zero operational stress</span>
+            </div>
+            <div class="bg-emerald-900/60 border border-emerald-800 p-3 rounded-xl">
+              <span class="text-amber-400 font-bold block text-sm sm:text-base">Kwara Hub</span>
+              <span class="text-emerald-300 text-xs">Fertile soil & river basins</span>
+            </div>
+            <div class="bg-emerald-900/60 border border-emerald-800 p-3 rounded-xl col-span-2 sm:col-span-1">
+              <span class="text-amber-400 font-bold block text-sm sm:text-base">Elite Machinery</span>
+              <span class="text-emerald-300 text-xs">Tractorization & irrigation</span>
+            </div>
+          </div>
+
+          <!-- CTAs -->
+          <div class="flex flex-col sm:flex-row gap-4 pt-4">
+            <a
+              href="#consultation-form"
+              class="px-8 py-4 rounded-xl bg-gradient-to-r from-amber-400 via-amber-500 to-amber-600 hover:from-amber-300 hover:to-amber-500 text-emerald-950 font-extrabold text-base shadow-xl shadow-amber-500/20 transition-all flex items-center justify-center gap-2 cursor-pointer transform hover:-translate-y-0.5 active:translate-y-0"
+            >
+              <span>Schedule Farm Setup Briefing</span>
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+            </a>
+
+            <a
+              href="https://wa.me/2348033106047?text=Hello%20JAYTECH%20FARMS%2C%20I%20am%20ready%20to%20inquire%20about%20a%20turnkey%20farm%20setup%20in%20Kwara%20State."
+              target="_blank"
+              rel="noopener noreferrer"
+              class="px-6 py-4 rounded-xl bg-emerald-900/80 hover:bg-emerald-800 text-emerald-100 font-bold text-base border border-emerald-700/80 transition-all flex items-center justify-center gap-2"
+            >
+              <svg class="w-5 h-5 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path></svg>
+              <span>WhatsApp: 08033106047</span>
+            </a>
+          </div>
+
+          <p class="text-xs text-emerald-400 flex items-center gap-2 pt-1">
+            <svg class="w-4 h-4 text-amber-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
+            <span>Turnkey Feasibility & Agronomist Review within 24 Hours.</span>
+          </p>
+
+        </div>
+
+        <!-- Right Hero Visual Card -->
+        <div class="lg:col-span-5 relative">
+          <div class="relative rounded-3xl overflow-hidden shadow-2xl border-2 border-emerald-700/80 bg-emerald-900 group">
+            <img
+              src="https://images.unsplash.com/photo-1500937386664-56d1dfef3854?auto=format&fit=crop&w=1000&q=80"
+              alt="JAYTECH FARMS Commercial Agriculture"
+              class="w-full h-[400px] sm:h-[480px] object-cover group-hover:scale-105 transition-transform duration-700"
+            />
+            
+            <div class="absolute inset-0 bg-gradient-to-t from-emerald-950 via-emerald-950/40 to-transparent flex flex-col justify-end p-6 sm:p-8">
+              <div class="bg-emerald-950/85 backdrop-blur-md p-5 rounded-2xl border border-emerald-700 space-y-2 shadow-lg">
+                <div class="flex items-center justify-between">
+                  <span class="text-xs font-bold text-amber-400 uppercase tracking-wider">Kwara Strategic Agro-Corridor</span>
+                  <span class="text-[10px] bg-emerald-800 text-emerald-200 px-2 py-0.5 rounded-full font-semibold">Active Farmlands</span>
+                </div>
+                <h4 class="font-serif text-lg sm:text-xl font-bold text-white">
+                  Engineered for Maximum Commercial Yield
+                </h4>
+                <p class="text-xs text-emerald-200 leading-relaxed">
+                  Bespoke arable farming, mechanized tractorization, high-yield seed propagation, and elite livestock infrastructure across Kwara State.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ================= THE PROBLEM & THE PROMISE ================= -->
+  <section id="problem-promise" class="py-20 sm:py-28 bg-emerald-50/60 text-emerald-950">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-16">
+      
+      <!-- Section Header -->
+      <div class="max-w-3xl mx-auto text-center space-y-4">
+        <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-900 text-amber-400 text-xs font-bold tracking-wide uppercase">
+          <svg class="w-4 h-4 text-amber-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+          <span>THE REALITY OF AGRIBUSINESS IN NIGERIA</span>
+        </div>
+
+        <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-extrabold text-emerald-950 tracking-tight">
+          Agriculture is the Safest Wealth Generator—If Done Right.
+        </h2>
+
+        <p class="text-base sm:text-lg text-emerald-800">
+          Yet, thousands of well-meaning investors and diaspora professionals lose millions each year to untrusted managers, poor soil profiling, and fragmented logistics.
+        </p>
+      </div>
+
+      <!-- 4 Hurdles Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        
+        <div class="bg-white p-6 rounded-2xl border border-red-100 shadow-sm space-y-3">
+          <div class="w-10 h-10 rounded-xl bg-red-50 text-red-600 flex items-center justify-center font-bold text-lg">⚠️</div>
+          <h3 class="font-serif font-bold text-lg text-emerald-950">Remote Management Failure</h3>
+          <p class="text-xs sm:text-sm text-emerald-800">Relatives or inexperienced managers mismanaging farm inputs, inflating costs, and abandoning operations.</p>
+        </div>
+
+        <div class="bg-white p-6 rounded-2xl border border-red-100 shadow-sm space-y-3">
+          <div class="w-10 h-10 rounded-xl bg-red-50 text-red-600 flex items-center justify-center font-bold text-lg">⚠️</div>
+          <h3 class="font-serif font-bold text-lg text-emerald-950">Wrong Seed & Soil Matching</h3>
+          <p class="text-xs sm:text-sm text-emerald-800">Planting low-germination uncertified seeds without prior soil nutrient testing and water table analysis.</p>
+        </div>
+
+        <div class="bg-white p-6 rounded-2xl border border-red-100 shadow-sm space-y-3">
+          <div class="w-10 h-10 rounded-xl bg-red-50 text-red-600 flex items-center justify-center font-bold text-lg">⚠️</div>
+          <h3 class="font-serif font-bold text-lg text-emerald-950">Inefficient Mechanization</h3>
+          <p class="text-xs sm:text-sm text-emerald-800">Relying on manual crude labor for commercial scale, leading to delayed planting cycles and crop losses.</p>
+        </div>
+
+        <div class="bg-white p-6 rounded-2xl border border-red-100 shadow-sm space-y-3">
+          <div class="w-10 h-10 rounded-xl bg-red-50 text-red-600 flex items-center justify-center font-bold text-lg">⚠️</div>
+          <h3 class="font-serif font-bold text-lg text-emerald-950">Market Off-take Bottlenecks</h3>
+          <p class="text-xs sm:text-sm text-emerald-800">Producing abundant harvest without direct logistics corridors to high-value industrial off-takers in Lagos and Abuja.</p>
+        </div>
+
+      </div>
+
+      <!-- The Turnkey Solution Banner -->
+      <div class="bg-gradient-to-br from-emerald-950 via-emerald-900 to-emerald-950 text-white rounded-3xl p-8 sm:p-12 shadow-2xl border border-emerald-800 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+        <div class="lg:col-span-8 space-y-4">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-400/20 text-amber-300 text-xs font-bold uppercase">
+            <span>THE JAYTECH FARMS SOLUTION</span>
+          </div>
+          <h3 class="font-serif text-2xl sm:text-3xl font-extrabold text-white">
+            Engineering Turnkey Agricultural Assets with Total Accountability
+          </h3>
+          <p class="text-emerald-100 text-sm sm:text-base leading-relaxed">
+            We remove guesswork. From acquiring fertile, legally secured land in Kwara State to deploying heavy machinery, hybrid seeds, bio-secure livestock pens, and distribution networks—we handle every milestone to commercial maturity.
+          </p>
+        </div>
+
+        <div class="lg:col-span-4 text-center lg:text-right">
+          <a
+            href="#consultation-form"
+            class="inline-flex items-center justify-center px-8 py-4 rounded-xl bg-amber-400 hover:bg-amber-300 text-emerald-950 font-extrabold text-sm shadow-xl shadow-amber-500/20 transition-all cursor-pointer transform hover:scale-105"
+          >
+            Start Your Turnkey Project
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ================= 5 SIGNATURE SERVICES ================= -->
+  <section id="services" class="py-24 bg-white text-emerald-950">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+      
+      <!-- Section Header -->
+      <div class="max-w-3xl mx-auto text-center space-y-4">
+        <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-amber-400/15 border border-amber-400/30 text-amber-900 text-xs font-bold tracking-wide uppercase">
+          <svg class="w-4 h-4 text-amber-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
+          <span>OUR SIGNATURE SERVICES</span>
+        </div>
+
+        <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-extrabold text-emerald-950 tracking-tight">
+          The 5 Pillars of Elite Agribusiness
+        </h2>
+
+        <p class="text-base sm:text-lg text-emerald-800">
+          We offer a complete, end-to-end suite of agricultural engineering services designed for clients who demand nothing short of excellence.
+        </p>
+      </div>
+
+      <!-- Service 1 -->
+      <div class="bg-gradient-to-br from-emerald-950 via-emerald-900 to-emerald-950 text-white rounded-3xl p-6 sm:p-10 shadow-xl border border-emerald-800 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+        <div class="lg:col-span-7 space-y-4">
+          <span class="text-xs font-bold text-amber-400 uppercase tracking-widest bg-amber-400/10 px-3 py-1 rounded border border-amber-400/20">Pillar 01</span>
+          <h3 class="font-serif text-2xl sm:text-3xl font-bold text-white">1. Bespoke Arable Farming Setup</h3>
+          <p class="text-amber-300 font-medium text-sm">Cassava, Grains, Vegetables, Soya & Cash Crops</p>
+          <p class="text-emerald-100 text-sm leading-relaxed">
+            From precision soil profiling and land clearing to solar-powered drip irrigation installations, we structure high-density crop farms built for continuous commercial yield.
+          </p>
+          <ul class="space-y-2 text-xs sm:text-sm text-emerald-200 pt-2">
+            <li class="flex items-center gap-2">✓ Comprehensive soil chemical and organic composition testing</li>
+            <li class="flex items-center gap-2">✓ Automated drip and center-pivot irrigation infrastructure</li>
+            <li class="flex items-center gap-2">✓ Professional agronomist field supervision and harvest planning</li>
+          </ul>
+        </div>
+        <div class="lg:col-span-5 rounded-2xl overflow-hidden shadow-lg border border-emerald-700">
+          <img src="https://images.unsplash.com/photo-1592417817098-8f3d6910985c?auto=format&fit=crop&w=800&q=80" alt="Arable Farming" class="w-full h-64 sm:h-72 object-cover" />
+        </div>
+      </div>
+
+      <!-- Service 2 -->
+      <div class="bg-emerald-50 rounded-3xl p-6 sm:p-10 shadow-md border border-emerald-200 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+        <div class="lg:col-span-5 order-2 lg:order-1 rounded-2xl overflow-hidden shadow-lg border border-emerald-200">
+          <img src="https://images.unsplash.com/photo-1548550023-2bdb3c5beed7?auto=format&fit=crop&w=800&q=80" alt="Livestock Farming" class="w-full h-64 sm:h-72 object-cover" />
+        </div>
+        <div class="lg:col-span-7 order-1 lg:order-2 space-y-4">
+          <span class="text-xs font-bold text-emerald-800 uppercase tracking-widest bg-emerald-200/60 px-3 py-1 rounded border border-emerald-300">Pillar 02</span>
+          <h3 class="font-serif text-2xl sm:text-3xl font-bold text-emerald-950">2. Elite Livestock Farm Setups</h3>
+          <p class="text-emerald-700 font-semibold text-sm">Bio-Secure Poultry, Piggery, Cattle Feedlots & Modern Fishery</p>
+          <p class="text-emerald-800 text-sm leading-relaxed">
+            We construct climate-controlled livestock housings, automated feeding systems, modern feed mills, and high-efficiency water recirculation systems (RAS) to minimize mortality and maximize weight gain.
+          </p>
+          <ul class="space-y-2 text-xs sm:text-sm text-emerald-900 pt-2">
+            <li class="flex items-center gap-2 font-medium">✓ Deep borehole water treatment and automated drinkers</li>
+            <li class="flex items-center gap-2 font-medium">✓ Certified veterinary bio-security protocols and feed optimization</li>
+            <li class="flex items-center gap-2 font-medium">✓ High-velocity poultry battery cages and earthen/tarpaulin fish ponds</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Service 3, 4, 5 Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        
+        <div class="bg-emerald-950 text-white p-8 rounded-3xl border border-emerald-800 space-y-4 flex flex-col justify-between">
+          <div class="space-y-3">
+            <span class="text-xs font-bold text-amber-400 uppercase tracking-wider block">Pillar 03</span>
+            <h4 class="font-serif font-bold text-xl text-white">3. Advanced Mechanized Farming</h4>
+            <p class="text-xs text-emerald-200 leading-relaxed">
+              Tractorization services, laser land leveling, mechanical seed planting, boom spraying, and combine harvesting to scale land rapidly.
+            </p>
+          </div>
+          <span class="text-xs font-semibold text-amber-300">Industrial Tractors & Implements</span>
+        </div>
+
+        <div class="bg-emerald-950 text-white p-8 rounded-3xl border border-emerald-800 space-y-4 flex flex-col justify-between">
+          <div class="space-y-3">
+            <span class="text-xs font-bold text-amber-400 uppercase tracking-wider block">Pillar 04</span>
+            <h4 class="font-serif font-bold text-xl text-white">4. Premium Seeds & Seedlings</h4>
+            <p class="text-xs text-emerald-200 leading-relaxed">
+              Certified high-germination hybrid seeds, grafted cashew/oil palm seedlings, and disease-resistant cassava stems tailored for Kwara soil.
+            </p>
+          </div>
+          <span class="text-xs font-semibold text-amber-300">Certified High-Yield Varieties</span>
+        </div>
+
+        <div class="bg-emerald-950 text-white p-8 rounded-3xl border border-emerald-800 space-y-4 flex flex-col justify-between">
+          <div class="space-y-3">
+            <span class="text-xs font-bold text-amber-400 uppercase tracking-wider block">Pillar 05</span>
+            <h4 class="font-serif font-bold text-xl text-white">5. Nationwide Produce Logistics</h4>
+            <p class="text-xs text-emerald-200 leading-relaxed">
+              Connecting farm-gate produce directly to major agro-processors, food factories, and wholesale markets in Lagos, Abuja, and Ibadan.
+            </p>
+          </div>
+          <span class="text-xs font-semibold text-amber-300">Direct Off-take Linkages</span>
+        </div>
+
+      </div>
+
+      <div class="text-center pt-4">
+        <a
+          href="#consultation-form"
+          class="inline-flex items-center gap-2 px-8 py-4 rounded-xl bg-gradient-to-r from-amber-400 to-amber-500 hover:from-amber-300 hover:to-amber-400 text-emerald-950 font-extrabold text-sm shadow-xl shadow-amber-500/20 transition-all cursor-pointer transform hover:scale-105"
+        >
+          <span>Request Custom Proposal for Your Project</span>
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ================= THE KWARA ADVANTAGE ================= -->
+  <section id="kwara-advantage" class="py-24 bg-emerald-950 text-white relative overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 space-y-16">
+      
+      <!-- Section Header -->
+      <div class="max-w-3xl mx-auto text-center space-y-4">
+        <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-amber-400/20 border border-amber-400/30 text-amber-300 text-xs font-bold tracking-wide uppercase">
+          <svg class="w-4 h-4 text-amber-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+          <span>THE KWARA ADVANTAGE</span>
+        </div>
+
+        <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white tracking-tight">
+          Why Kwara State is Nigeria's Agribusiness Goldmine
+        </h2>
+
+        <p class="text-base sm:text-lg text-emerald-200">
+          Positioned in the middle belt transition zone with virgin fertile land, rich river basins, and unbeatable logistics access to Northern and Southern food consumption hubs.
+        </p>
+      </div>
+
+      <!-- 3 Advantage Cards -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        
+        <div class="bg-emerald-900/50 p-8 rounded-3xl border border-emerald-800 hover:border-amber-400/50 transition-all space-y-4">
+          <div class="w-12 h-12 rounded-2xl bg-amber-400/20 text-amber-400 flex items-center justify-center font-bold text-xl">🌱</div>
+          <h3 class="font-serif text-xl font-bold text-white">Highly Fertile Virgin Arable Land</h3>
+          <p class="text-emerald-200 text-sm leading-relaxed">
+            Rich alluvial and loamy soil profiles with ideal mineral density, capable of sustaining diverse high-yield cash crops and grains year-round.
+          </p>
+        </div>
+
+        <div class="bg-emerald-900/50 p-8 rounded-3xl border border-emerald-800 hover:border-amber-400/50 transition-all space-y-4">
+          <div class="w-12 h-12 rounded-2xl bg-amber-400/20 text-amber-400 flex items-center justify-center font-bold text-xl">💧</div>
+          <h3 class="font-serif text-xl font-bold text-white">Abundant Water & River Tributaries</h3>
+          <p class="text-emerald-200 text-sm leading-relaxed">
+            High annual precipitation complemented by direct proximity to major river tributaries (River Niger & Asa River), enabling year-round irrigation.
+          </p>
+        </div>
+
+        <div class="bg-emerald-900/50 p-8 rounded-3xl border border-emerald-800 hover:border-amber-400/50 transition-all space-y-4">
+          <div class="w-12 h-12 rounded-2xl bg-amber-400/20 text-amber-400 flex items-center justify-center font-bold text-xl">🚛</div>
+          <h3 class="font-serif text-xl font-bold text-white">Strategic Gateway Logistics</h3>
+          <p class="text-emerald-200 text-sm leading-relaxed">
+            Positioned right at the crossroads of Northern & Southern trade corridors—allowing seamless produce off-take to Lagos, Abuja, Ibadan, and Kano within hours.
+          </p>
+        </div>
+
+      </div>
+
+      <!-- Transit Times Grid -->
+      <div class="bg-gradient-to-br from-emerald-900/80 via-emerald-950 to-emerald-900/80 p-8 sm:p-12 rounded-3xl border border-emerald-700/80 shadow-2xl">
+        <div class="flex flex-col lg:flex-row items-center justify-between gap-8">
+          <div class="space-y-3 max-w-xl text-center lg:text-left">
+            <span class="text-xs font-bold text-amber-400 uppercase tracking-widest">Central Distribution Hub</span>
+            <h3 class="font-serif text-2xl sm:text-3xl font-extrabold text-white">
+              Direct Transit to Nigeria's Highest Value Consumer Markets
+            </h3>
+            <p class="text-emerald-200 text-sm">
+              Lowest logistics transit times, minimal post-harvest losses, and direct factory off-take access.
+            </p>
+          </div>
+
+          <div class="w-full lg:w-auto grid grid-cols-2 gap-4">
+            <div class="bg-emerald-950 p-4 rounded-2xl border border-emerald-800 text-center">
+              <span class="text-[10px] text-amber-400 font-bold uppercase block">Commercial Off-take</span>
+              <div class="font-bold text-white text-base sm:text-lg">Lagos Hub</div>
+              <div class="text-xs text-emerald-300">⚡ 4 - 5 Hours</div>
+            </div>
+
+            <div class="bg-emerald-950 p-4 rounded-2xl border border-emerald-800 text-center">
+              <span class="text-[10px] text-amber-400 font-bold uppercase block">Federal Supply</span>
+              <div class="font-bold text-white text-base sm:text-lg">Abuja FCT</div>
+              <div class="text-xs text-emerald-300">⚡ 4.5 - 5 Hours</div>
+            </div>
+
+            <div class="bg-emerald-950 p-4 rounded-2xl border border-emerald-800 text-center">
+              <span class="text-[10px] text-amber-400 font-bold uppercase block">Feed Market</span>
+              <div class="font-bold text-white text-base sm:text-lg">Ibadan</div>
+              <div class="text-xs text-emerald-300">⚡ 2.5 - 3 Hours</div>
+            </div>
+
+            <div class="bg-emerald-950 p-4 rounded-2xl border border-emerald-800 text-center">
+              <span class="text-[10px] text-amber-400 font-bold uppercase block">Grain Corridor</span>
+              <div class="font-bold text-white text-base sm:text-lg">Kano & North</div>
+              <div class="text-xs text-emerald-300">⚡ 8 - 9 Hours</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ================= HOW WE WORK ================= -->
+  <section id="how-we-work" class="py-24 bg-emerald-50/50 text-emerald-950">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-16">
+      
+      <!-- Header -->
+      <div class="max-w-3xl mx-auto text-center space-y-4">
+        <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-900 text-amber-400 text-xs font-bold tracking-wide uppercase">
+          <span>THE 4-STEP PREMIUM EXPERIENCE</span>
+        </div>
+
+        <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-extrabold text-emerald-950 tracking-tight">
+          How We Build Your Turnkey Farm
+        </h2>
+
+        <p class="text-base sm:text-lg text-emerald-800">
+          From initial discovery to commercial harvest, our structured engineering workflow guarantees accountability, timing, and international standard execution.
+        </p>
+      </div>
+
+      <!-- 4 Steps -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        
+        <div class="bg-white p-8 rounded-3xl border border-emerald-100 shadow-lg space-y-4">
+          <span class="text-3xl font-extrabold text-amber-500 font-serif block">Step 01</span>
+          <h3 class="font-serif text-xl font-bold text-emerald-950">Discovery & Vision Alignment</h3>
+          <p class="text-emerald-800 text-sm leading-relaxed">
+            We evaluate your investment horizon, crop/livestock preferences, capital allocation, and target off-take goals.
+          </p>
+        </div>
+
+        <div class="bg-white p-8 rounded-3xl border border-emerald-100 shadow-lg space-y-4">
+          <span class="text-3xl font-extrabold text-amber-500 font-serif block">Step 02</span>
+          <h3 class="font-serif text-xl font-bold text-emerald-950">Feasibility & Engineering Blueprint</h3>
+          <p class="text-emerald-800 text-sm leading-relaxed">
+            Soil tests, topography mapping, borehole water profiling, and architectural 3D farm estate blueprints.
+          </p>
+        </div>
+
+        <div class="bg-white p-8 rounded-3xl border border-emerald-100 shadow-lg space-y-4">
+          <span class="text-3xl font-extrabold text-amber-500 font-serif block">Step 03</span>
+          <h3 class="font-serif text-xl font-bold text-emerald-950">Precision Setup & Construction</h3>
+          <p class="text-emerald-800 text-sm leading-relaxed">
+            Land clearing, tractorization, irrigation deployment, livestock housing construction, and certified seed planting.
+          </p>
+        </div>
+
+        <div class="bg-white p-8 rounded-3xl border border-emerald-100 shadow-lg space-y-4">
+          <span class="text-3xl font-extrabold text-amber-500 font-serif block">Step 04</span>
+          <h3 class="font-serif text-xl font-bold text-emerald-950">Handover & Operational Management</h3>
+          <p class="text-emerald-800 text-sm leading-relaxed">
+            Turnkey asset commissioning, staff onboarding, real-time diaspora reporting, and farm-gate produce off-take.
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ================= AGRIBUSINESS YIELD ESTIMATOR ================= -->
+  <section id="roi-calculator" class="py-24 bg-white text-emerald-950">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+      
+      <div class="max-w-3xl mx-auto text-center space-y-4">
+        <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-100 border border-emerald-200 text-emerald-900 text-xs font-bold tracking-wide uppercase">
+          <span>INTERACTIVE YIELD ESTIMATOR</span>
+        </div>
+
+        <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-extrabold text-emerald-950 tracking-tight">
+          Agribusiness Investment Yield Estimator
+        </h2>
+
+        <p class="text-base sm:text-lg text-emerald-800">
+          Select your target land scale and agribusiness venture to preview estimated execution timelines and returns in Kwara State.
+        </p>
+      </div>
+
+      <!-- Calculator Box -->
+      <div class="bg-emerald-950 text-white rounded-3xl p-6 sm:p-10 shadow-2xl border border-emerald-800 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+        
+        <!-- Controls -->
+        <div class="lg:col-span-6 space-y-6">
+          
+          <!-- Scale Selection -->
+          <div class="space-y-2">
+            <label class="text-xs font-bold text-amber-400 uppercase tracking-wider block">1. Target Land Scale</label>
+            <div class="grid grid-cols-3 gap-2">
+              <button type="button" onclick="setCalcScale('small', this)" class="calc-scale-btn p-3 rounded-xl border text-xs sm:text-sm font-bold text-center bg-emerald-900/60 text-emerald-200 border-emerald-800 hover:bg-emerald-800">Small (1–5 Acres)</button>
+              <button type="button" onclick="setCalcScale('medium', this)" class="calc-scale-btn p-3 rounded-xl border text-xs sm:text-sm font-bold text-center bg-amber-400 text-emerald-950 border-amber-400 shadow-lg">Medium (5–50 Acres)</button>
+              <button type="button" onclick="setCalcScale('large', this)" class="calc-scale-btn p-3 rounded-xl border text-xs sm:text-sm font-bold text-center bg-emerald-900/60 text-emerald-200 border-emerald-800 hover:bg-emerald-800">Commercial (50+ Acres)</button>
+            </div>
+          </div>
+
+          <!-- Sector Focus -->
+          <div class="space-y-2">
+            <label class="text-xs font-bold text-amber-400 uppercase tracking-wider block">2. Farming Sector Focus</label>
+            <div class="grid grid-cols-3 gap-2">
+              <button type="button" onclick="setCalcSector('arable', this)" class="calc-sector-btn p-3 rounded-xl border text-xs sm:text-sm font-bold text-center bg-emerald-900/60 text-emerald-200 border-emerald-800 hover:bg-emerald-800">Arable Crops</button>
+              <button type="button" onclick="setCalcSector('livestock', this)" class="calc-sector-btn p-3 rounded-xl border text-xs sm:text-sm font-bold text-center bg-emerald-900/60 text-emerald-200 border-emerald-800 hover:bg-emerald-800">Elite Livestock</button>
+              <button type="button" onclick="setCalcSector('integrated', this)" class="calc-sector-btn p-3 rounded-xl border text-xs sm:text-sm font-bold text-center bg-amber-400 text-emerald-950 border-amber-400 shadow-lg">Integrated Both</button>
+            </div>
+          </div>
+
+          <!-- Budget Bracket -->
+          <div class="space-y-2">
+            <label class="text-xs font-bold text-amber-400 uppercase tracking-wider block">3. Capital Budget Bracket</label>
+            <div class="grid grid-cols-2 gap-2">
+              <button type="button" onclick="setCalcBudget('15m', this)" class="calc-budget-btn p-2.5 rounded-xl border text-xs font-bold text-center bg-emerald-900/60 text-emerald-200 border-emerald-800 hover:bg-emerald-800">₦5M – ₦15 Million</button>
+              <button type="button" onclick="setCalcBudget('50m', this)" class="calc-budget-btn p-2.5 rounded-xl border text-xs font-bold text-center bg-amber-400 text-emerald-950 border-amber-400 shadow-lg">₦15M – ₦50 Million</button>
+              <button type="button" onclick="setCalcBudget('100m', this)" class="calc-budget-btn p-2.5 rounded-xl border text-xs font-bold text-center bg-emerald-900/60 text-emerald-200 border-emerald-800 hover:bg-emerald-800">₦50M – ₦100 Million</button>
+              <button type="button" onclick="setCalcBudget('100m+', this)" class="calc-budget-btn p-2.5 rounded-xl border text-xs font-bold text-center bg-emerald-900/60 text-emerald-200 border-emerald-800 hover:bg-emerald-800">₦100 Million+ Commercial</button>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Output Projections -->
+        <div class="lg:col-span-6 bg-emerald-900/80 p-6 sm:p-8 rounded-2xl border border-emerald-700/80 space-y-6">
+          <div class="flex items-center justify-between border-b border-emerald-800 pb-3">
+            <span class="font-bold text-sm text-white">Projected Setup Summary</span>
+            <span class="text-xs bg-amber-400/20 text-amber-300 font-semibold px-2.5 py-1 rounded">Kwara Benchmark</span>
+          </div>
+
+          <div class="grid grid-cols-2 gap-4">
+            <div class="bg-emerald-950 p-4 rounded-xl border border-emerald-800">
+              <span class="text-[11px] text-emerald-300 uppercase block">Setup Execution</span>
+              <span id="proj-setup" class="font-serif font-extrabold text-amber-400 text-base sm:text-lg">60 – 90 Days</span>
+            </div>
+            <div class="bg-emerald-950 p-4 rounded-xl border border-emerald-800">
+              <span class="text-[11px] text-emerald-300 uppercase block">Harvest Cycle</span>
+              <span id="proj-cycle" class="font-serif font-extrabold text-emerald-100 text-xs sm:text-sm">Quarterly Multi-crop</span>
+            </div>
+          </div>
+
+          <div class="bg-emerald-950 p-5 rounded-xl border border-amber-400/30 space-y-1">
+            <span class="text-xs text-amber-300 uppercase font-semibold block">Projected Annualized Efficiency Yield</span>
+            <div id="proj-yield" class="text-2xl sm:text-3xl font-extrabold text-amber-400 font-serif">35% – 55% Annualized Yield</div>
+            <span id="proj-features" class="text-xs text-emerald-200 block pt-1">Key Components: Full Mechanized Ploughing, Solar Boreholes, RAS Fishery</span>
+          </div>
+
+          <a
+            href="#consultation-form"
+            class="w-full py-4 rounded-xl bg-gradient-to-r from-amber-400 to-amber-500 hover:from-amber-300 hover:to-amber-400 text-emerald-950 font-extrabold text-sm shadow-xl flex items-center justify-center gap-2 text-decoration-none"
+          >
+            <span>Request Feasibility Report for this Scale</span>
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+          </a>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ================= AGRIBUSINESS CONSULTATION QUESTIONNAIRE ================= -->
+  <section id="consultation-form" class="py-24 bg-emerald-950 text-white relative">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 space-y-10">
+      
+      <!-- Title & Intro -->
+      <div class="text-center space-y-4">
+        <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-amber-400/20 border border-amber-400/30 text-amber-300 text-xs font-bold tracking-wide uppercase">
+          <span>EXECUTIVE BRIEFING FORM</span>
+        </div>
+
+        <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white tracking-tight">
+          JAYTECH FARMS Agribusiness Consultation Questionnaire
+        </h2>
+
+        <p class="text-emerald-200 text-sm sm:text-base max-w-2xl mx-auto leading-relaxed">
+          Thank you for your interest in partnering with JAYTECH FARMS. Please fill out this brief questionnaire to help us understand your vision. One of our Senior Agribusiness Consultants will contact you within 24 hours.
+        </p>
+      </div>
+
+      <!-- Submission Success Modal / Box -->
+      <div id="form-success-box" class="hidden bg-emerald-900 border border-emerald-700 rounded-3xl p-8 sm:p-12 text-center space-y-6 shadow-2xl">
+        <div class="w-16 h-16 bg-amber-400 rounded-full flex items-center justify-center mx-auto text-emerald-950 text-3xl font-bold">✓</div>
+        <h3 class="font-serif text-2xl sm:text-3xl font-extrabold text-white">Consultation Brief Received!</h3>
+        <p id="success-msg" class="text-emerald-100 text-sm max-w-lg mx-auto">
+          Your project brief has been recorded and synced to our agronomist dashboard. Click below to initiate your WhatsApp priority review.
+        </p>
+        <div class="pt-4 flex flex-col sm:flex-row gap-4 justify-center">
+          <a
+            id="success-whatsapp-btn"
+            href="https://wa.me/2348033106047"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="px-8 py-4 rounded-xl bg-gradient-to-r from-emerald-500 to-emerald-600 hover:from-emerald-400 hover:to-emerald-500 text-white font-extrabold text-base shadow-xl flex items-center justify-center gap-2"
+          >
+            <span>Open WhatsApp Briefing (08033106047)</span>
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- Main Form -->
+      <form id="agri-lead-form" onsubmit="handleFormSubmit(event)" class="bg-emerald-900/60 border border-emerald-800 rounded-3xl p-6 sm:p-10 shadow-2xl space-y-8 backdrop-blur-md">
+        
+        <!-- SECTION 1: Personal / Company Info -->
+        <div class="space-y-4 border-b border-emerald-800 pb-8">
+          <div class="flex items-center gap-2 text-amber-400 font-bold text-sm uppercase tracking-wider">
+            <span>Section 1: Contact Information</span>
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div class="space-y-1.5">
+              <label class="text-xs font-semibold text-emerald-200">Full Name *</label>
+              <input type="text" id="inp-fullName" required placeholder="e.g., Dr. Babatunde Adeleke" class="w-full px-4 py-3 rounded-xl bg-emerald-950 border border-emerald-700 text-white text-sm focus:outline-none focus:border-amber-400" />
+            </div>
+
+            <div class="space-y-1.5">
+              <label class="text-xs font-semibold text-emerald-200">Company / Organization (Optional)</label>
+              <input type="text" id="inp-companyName" placeholder="e.g., Adeleke Agri-Holdings Ltd." class="w-full px-4 py-3 rounded-xl bg-emerald-950 border border-emerald-700 text-white text-sm focus:outline-none focus:border-amber-400" />
+            </div>
+
+            <div class="space-y-1.5">
+              <label class="text-xs font-semibold text-emerald-200">Email Address *</label>
+              <input type="email" id="inp-email" required placeholder="e.g., adeleke@agriholdings.com" class="w-full px-4 py-3 rounded-xl bg-emerald-950 border border-emerald-700 text-white text-sm focus:outline-none focus:border-amber-400" />
+            </div>
+
+            <div class="space-y-1.5">
+              <label class="text-xs font-semibold text-emerald-200">WhatsApp / Phone Number *</label>
+              <input type="tel" id="inp-phone" required placeholder="e.g., 08012345678 or +44 / +1..." class="w-full px-4 py-3 rounded-xl bg-emerald-950 border border-emerald-700 text-white text-sm focus:outline-none focus:border-amber-400" />
+            </div>
+
+            <div class="space-y-1.5 sm:col-span-2">
+              <label class="text-xs font-semibold text-emerald-200">Current Location / Country of Residence *</label>
+              <input type="text" id="inp-location" required placeholder="e.g., Lagos, Nigeria / United Kingdom / United States" class="w-full px-4 py-3 rounded-xl bg-emerald-950 border border-emerald-700 text-white text-sm focus:outline-none focus:border-amber-400" />
+            </div>
+          </div>
+        </div>
+
+        <!-- SECTION 2: Farming Interests -->
+        <div class="space-y-4 border-b border-emerald-800 pb-8">
+          <div class="flex items-center gap-2 text-amber-400 font-bold text-sm uppercase tracking-wider">
+            <span>Section 2: Agricultural Interests</span>
+          </div>
+
+          <p class="text-xs text-emerald-200">Select all agricultural sectors you wish to establish:</p>
+          
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+            <label class="flex items-center gap-3 p-3.5 rounded-xl bg-emerald-950 border border-emerald-800 text-xs sm:text-sm font-medium hover:bg-emerald-900 cursor-pointer">
+              <input type="checkbox" name="interests" value="Bespoke Arable Farming (Cassava, Maize, Soya, Vegetables)" class="text-amber-400 focus:ring-amber-400 rounded" />
+              <span>Arable Crop Cultivation (Cassava, Grains, Vegetables)</span>
+            </label>
+
+            <label class="flex items-center gap-3 p-3.5 rounded-xl bg-emerald-950 border border-emerald-800 text-xs sm:text-sm font-medium hover:bg-emerald-900 cursor-pointer">
+              <input type="checkbox" name="interests" value="Elite Livestock (Poultry, Piggery, Cattle feedlots)" class="text-amber-400 focus:ring-amber-400 rounded" />
+              <span>Elite Livestock (Poultry, Cattle Feedlots, Piggery)</span>
+            </label>
+
+            <label class="flex items-center gap-3 p-3.5 rounded-xl bg-emerald-950 border border-emerald-800 text-xs sm:text-sm font-medium hover:bg-emerald-900 cursor-pointer">
+              <input type="checkbox" name="interests" value="Modern Fishery & Aquaculture (Ponds / RAS)" class="text-amber-400 focus:ring-amber-400 rounded" />
+              <span>Modern Fishery & Aquaculture (RAS / Ponds)</span>
+            </label>
+
+            <label class="flex items-center gap-3 p-3.5 rounded-xl bg-emerald-950 border border-emerald-800 text-xs sm:text-sm font-medium hover:bg-emerald-900 cursor-pointer">
+              <input type="checkbox" name="interests" value="Advanced Farm Mechanization & Tractorization" class="text-amber-400 focus:ring-amber-400 rounded" />
+              <span>Heavy Mechanization & Tractorization</span>
+            </label>
+
+            <label class="flex items-center gap-3 p-3.5 rounded-xl bg-emerald-950 border border-emerald-800 text-xs sm:text-sm font-medium hover:bg-emerald-900 cursor-pointer sm:col-span-2">
+              <input type="checkbox" name="interests" value="Full Integrated Turnkey Agricultural Estate" class="text-amber-400 focus:ring-amber-400 rounded" />
+              <span>Full Integrated Turnkey Commercial Farm Estate</span>
+            </label>
+          </div>
+        </div>
+
+        <!-- SECTION 3: Land Status & Scale -->
+        <div class="space-y-4 border-b border-emerald-800 pb-8">
+          <div class="flex items-center gap-2 text-amber-400 font-bold text-sm uppercase tracking-wider">
+            <span>Section 3: Land Status & Proposed Scale</span>
+          </div>
+
+          <div class="space-y-3">
+            <label class="text-xs font-semibold text-emerald-200 block">Do you currently own land for this project?</label>
+            <div class="space-y-2">
+              <label class="flex items-center gap-3 p-3 rounded-xl bg-emerald-950 border border-emerald-800 text-xs sm:text-sm cursor-pointer">
+                <input type="radio" name="landStatus" value="Yes, in Kwara State." checked class="text-amber-400" />
+                <span>Yes, in Kwara State.</span>
+              </label>
+              <label class="flex items-center gap-3 p-3 rounded-xl bg-emerald-950 border border-emerald-800 text-xs sm:text-sm cursor-pointer">
+                <input type="radio" name="landStatus" value="Yes, in another State in Nigeria" class="text-amber-400" />
+                <span>Yes, in another State in Nigeria</span>
+              </label>
+              <label class="flex items-center gap-3 p-3 rounded-xl bg-emerald-950 border border-emerald-800 text-xs sm:text-sm cursor-pointer">
+                <input type="radio" name="landStatus" value="No, I would like JAYTECH FARMS to assist in securing fertile land in Kwara State." class="text-amber-400" />
+                <span>No, I would like JAYTECH FARMS to assist in securing fertile land in Kwara State.</span>
+              </label>
+            </div>
+          </div>
+
+          <div class="space-y-3 pt-2">
+            <label class="text-xs font-semibold text-emerald-200 block">What is the proposed scale of land?</label>
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
+              <label class="flex items-center gap-2 p-3 rounded-xl bg-emerald-950 border border-emerald-800 text-xs cursor-pointer">
+                <input type="radio" name="landScale" value="Small Scale (1 – 5 Acres / Plot-based)" class="text-amber-400" />
+                <span>Small Scale (1–5 Acres)</span>
+              </label>
+              <label class="flex items-center gap-2 p-3 rounded-xl bg-emerald-950 border border-emerald-800 text-xs cursor-pointer">
+                <input type="radio" name="landScale" value="Medium Scale (5 – 50 Acres)" checked class="text-amber-400" />
+                <span>Medium Scale (5–50 Acres)</span>
+              </label>
+              <label class="flex items-center gap-2 p-3 rounded-xl bg-emerald-950 border border-emerald-800 text-xs cursor-pointer">
+                <input type="radio" name="landScale" value="Large/Commercial Scale (50+ Acres)" class="text-amber-400" />
+                <span>Commercial (50+ Acres)</span>
+              </label>
+            </div>
+          </div>
+        </div>
+
+        <!-- SECTION 4: Budget & Timeline -->
+        <div class="space-y-4 border-b border-emerald-800 pb-8">
+          <div class="flex items-center gap-2 text-amber-400 font-bold text-sm uppercase tracking-wider">
+            <span>Section 4: Budget & Timeline</span>
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div class="space-y-2">
+              <label class="text-xs font-semibold text-emerald-200">Capital Budget Allocation</label>
+              <select id="inp-budget" class="w-full px-4 py-3 rounded-xl bg-emerald-950 border border-emerald-700 text-white text-sm focus:outline-none focus:border-amber-400">
+                <option value="₦5 Million – ₦15 Million">₦5 Million – ₦15 Million</option>
+                <option value="₦15 Million – ₦50 Million" selected>₦15 Million – ₦50 Million</option>
+                <option value="₦50 Million – ₦100 Million">₦50 Million – ₦100 Million</option>
+                <option value="₦100 Million+">₦100 Million+ Commercial</option>
+              </select>
+            </div>
+
+            <div class="space-y-2">
+              <label class="text-xs font-semibold text-emerald-200">Target Implementation Timeline</label>
+              <select id="inp-timeline" class="w-full px-4 py-3 rounded-xl bg-emerald-950 border border-emerald-700 text-white text-sm focus:outline-none focus:border-amber-400">
+                <option value="Immediately (Within 30 days)" selected>Immediately (Within 30 days)</option>
+                <option value="1 – 3 Months">1 – 3 Months</option>
+                <option value="3 – 6 Months">3 – 6 Months</option>
+                <option value="Planning / Exploratory Phase">Planning / Exploratory Phase</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <!-- SECTION 5: Additional Details -->
+        <div class="space-y-4">
+          <div class="space-y-2">
+            <label class="text-xs font-semibold text-emerald-200 block">Please share any specific requirements or tastes you want reflected in your farm setup:</label>
+            <textarea id="inp-details" rows="3" placeholder='e.g., "I want a solar-powered drip irrigation system," "I am in the Diaspora and need remote monitoring," "I want direct off-take agreements."' class="w-full p-4 rounded-xl bg-emerald-950 border border-emerald-700 text-white placeholder-emerald-600 focus:outline-none focus:border-amber-400 text-xs sm:text-sm"></textarea>
+          </div>
+        </div>
+
+        <!-- Submit Button -->
+        <div class="pt-2 space-y-3">
+          <button
+            type="submit"
+            id="submit-btn"
+            class="w-full py-5 rounded-xl bg-gradient-to-r from-amber-400 via-amber-500 to-amber-600 hover:from-amber-300 hover:to-amber-500 text-emerald-950 font-extrabold text-base sm:text-lg shadow-2xl transition-all flex items-center justify-center gap-3 cursor-pointer transform hover:-translate-y-0.5"
+          >
+            <span>SUBMIT BRIEF & SCHEDULE CONSULTATION</span>
+            <svg class="w-5 h-5 text-emerald-950" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+          </button>
+          
+          <p class="text-center text-[11px] text-emerald-400 font-light italic">
+            Privacy Guarantee: Your data is secure and will only be used to structure your turnkey agribusiness proposal.
+          </p>
+        </div>
+
+      </form>
+
+    </div>
+  </section>
+
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="bg-emerald-950 text-white border-t border-emerald-900 py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        
+        <!-- Brand -->
+        <div class="space-y-4">
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-amber-400 to-amber-600 p-0.5">
+              <div class="w-full h-full bg-emerald-950 rounded-[10px] flex items-center justify-center font-bold text-amber-400 text-lg">JF</div>
+            </div>
+            <span class="font-serif font-extrabold text-2xl text-white tracking-tight">JAYTECH FARMS</span>
+          </div>
+          <p class="text-emerald-300 text-xs leading-relaxed">
+            We design, set up, and manage world-class turnkey farms tailored to your vision and built to international standards in Kwara State, Nigeria.
+          </p>
+          <div class="inline-flex items-center gap-2 text-xs text-amber-300 font-semibold bg-amber-400/10 px-3 py-1.5 rounded-lg border border-amber-400/20">
+            <span>JAYTECH FARMS Agribusiness Partner</span>
+          </div>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="space-y-3">
+          <h4 class="font-serif font-bold text-amber-400 text-sm tracking-wider uppercase">Navigation</h4>
+          <ul class="space-y-2 text-xs text-emerald-200">
+            <li><a href="#problem-promise" class="hover:text-amber-400 transition-colors">Why Turnkey Agribusiness</a></li>
+            <li><a href="#services" class="hover:text-amber-400 transition-colors">5 Signature Pillars</a></li>
+            <li><a href="#kwara-advantage" class="hover:text-amber-400 transition-colors">The Kwara State Corridor</a></li>
+            <li><a href="#how-we-work" class="hover:text-amber-400 transition-colors">How We Build Your Farm</a></li>
+            <li><a href="#roi-calculator" class="hover:text-amber-400 transition-colors">Yield Estimator Widget</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact Channels -->
+        <div class="space-y-3">
+          <h4 class="font-serif font-bold text-amber-400 text-sm tracking-wider uppercase">Direct Contact</h4>
+          <div class="space-y-2 text-xs text-emerald-200">
+            <div class="flex items-center gap-2">
+              <span class="text-amber-400 font-bold">WhatsApp:</span>
+              <a href="https://wa.me/2348033106047" target="_blank" class="hover:text-amber-400">08033106047 (+234 803 310 6047)</a>
+            </div>
+            <div class="flex items-center gap-2">
+              <span class="text-amber-400 font-bold">Call:</span>
+              <a href="tel:09158260545" class="hover:text-amber-400">09158260545 (+234 915 826 0545)</a>
+            </div>
+            <div class="flex items-center gap-2">
+              <span class="text-amber-400 font-bold">Email:</span>
+              <a href="mailto:jayebabasammy@gmail.com" class="hover:text-amber-400">jayebabasammy@gmail.com</a>
+            </div>
+            <div class="flex items-center gap-2">
+              <span class="text-amber-400 font-bold">TikTok:</span>
+              <a href="https://www.tiktok.com/@jaytech_farms" target="_blank" class="hover:text-amber-400">@jaytech_farms</a>
+            </div>
+            <div class="flex items-center gap-2">
+              <span class="text-amber-400 font-bold">Location:</span>
+              <span>Kwara State, Nigeria</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Consultation CTA -->
+        <div class="space-y-3">
+          <h4 class="font-serif font-bold text-amber-400 text-sm tracking-wider uppercase">Consultation & Inquiries</h4>
+          <p class="text-xs text-emerald-300">
+            Schedule your executive consultation briefing with our agribusiness engineering team.
+          </p>
+          <a
+            href="#consultation-form"
+            class="inline-block w-full py-3 rounded-xl bg-gradient-to-r from-amber-400 to-amber-500 hover:from-amber-300 hover:to-amber-400 text-emerald-950 font-bold text-xs text-center shadow-lg transition-all"
+          >
+            Start Consultation Brief
+          </a>
+        </div>
+
+      </div>
+
+      <div class="pt-8 border-t border-emerald-900 flex flex-col sm:flex-row items-center justify-between text-xs text-emerald-400 gap-4">
+        <p>© 2026 JAYTECH FARMS. All rights reserved. Built for Commercial Excellence in Kwara State.</p>
+        <p>Turnkey Agribusiness Engineering & Agronomy Management</p>
+      </div>
+
+    </div>
+  </footer>
+
+
+  <!-- ================= FLOATING WHATSAPP BUTTON ================= -->
+  <a
+    href="https://wa.me/2348033106047?text=Hello%20JAYTECH%20FARMS%2C%20I%20am%20interested%20in%20a%20turnkey%20farm%20setup%20in%20Kwara%20State."
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="Chat on WhatsApp"
+    class="fixed bottom-6 right-6 z-50 flex items-center gap-3 px-4 py-3.5 bg-gradient-to-r from-emerald-500 to-emerald-600 hover:from-emerald-400 hover:to-emerald-500 text-white rounded-full shadow-2xl shadow-emerald-950/40 border-2 border-emerald-300/40 transition-all transform hover:scale-105 group text-decoration-none"
+  >
+    <div class="w-6 h-6 flex items-center justify-center">
+      <svg class="w-6 h-6 fill-current text-white" viewBox="0 0 24 24"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.598 2.664-.699c.983.541 1.956.828 2.796.828 3.182 0 5.768-2.587 5.768-5.766.001-3.181-2.585-5.714-5.768-5.714zm0-2.172c4.418 0 8 3.582 8 8 0 1.545-.443 2.99-1.218 4.219l1.187 4.339-4.444-1.166c-1.18.665-2.54 1.042-3.993 1.042-4.418 0-8-3.582-8-8 0-4.418 3.582-8 8-8z"/></svg>
+    </div>
+    <span class="font-bold text-xs sm:text-sm tracking-wide group-hover:inline-block">
+      Chat with Agribusiness Consultant
+    </span>
+  </a>
+
+</div>
+
+<!-- ================= JAVASCRIPT LOGIC ================= -->
+<script>
+  // Mobile menu toggle
+  function toggleMobileMenu() {
+    var menu = document.getElementById('mobile-menu');
+    if (menu.classList.contains('hidden')) {
+      menu.classList.remove('hidden');
+    } else {
+      menu.classList.add('hidden');
+    }
+  }
+
+  // Calculator State & Projections
+  var currentScale = "medium";
+  var currentSector = "integrated";
+  var currentBudget = "50m";
+
+  var scaleData = {
+    small: {
+      setup: "30 – 45 Days",
+      cycle: "Every 90 – 120 Days (Crops / Poultry)",
+      yield: "30% – 45% Annualized Yield",
+      features: "Drip Irrigation, Bio-Secure Housing, Soil Conditioning"
+    },
+    medium: {
+      setup: "60 – 90 Days",
+      cycle: "Quarterly Multi-crop & Continuous Livestock",
+      yield: "35% – 55% Annualized Yield",
+      features: "Full Mechanized Ploughing, Solar Boreholes, RAS Fishery"
+    },
+    large: {
+      setup: "90 – 120 Days",
+      cycle: "Continuous Year-Round Harvesting & Export Supply",
+      yield: "45% – 65%+ Annualized Yield",
+      features: "Industrial Tractorization, Off-take Contracts, Remote Monitoring"
+    }
+  };
+
+  function updateCalcDisplay() {
+    var data = scaleData[currentScale];
+    document.getElementById('proj-setup').innerText = data.setup;
+    document.getElementById('proj-cycle').innerText = data.cycle;
+    document.getElementById('proj-yield').innerText = data.yield;
+    document.getElementById('proj-features').innerText = "Key Components: " + data.features;
+  }
+
+  function setCalcScale(scale, btn) {
+    currentScale = scale;
+    document.querySelectorAll('.calc-scale-btn').forEach(function(b) {
+      b.className = 'calc-scale-btn p-3 rounded-xl border text-xs sm:text-sm font-bold text-center bg-emerald-900/60 text-emerald-200 border-emerald-800 hover:bg-emerald-800';
+    });
+    btn.className = 'calc-scale-btn p-3 rounded-xl border text-xs sm:text-sm font-bold text-center bg-amber-400 text-emerald-950 border-amber-400 shadow-lg';
+    updateCalcDisplay();
+  }
+
+  function setCalcSector(sector, btn) {
+    currentSector = sector;
+    document.querySelectorAll('.calc-sector-btn').forEach(function(b) {
+      b.className = 'calc-sector-btn p-3 rounded-xl border text-xs sm:text-sm font-bold text-center bg-emerald-900/60 text-emerald-200 border-emerald-800 hover:bg-emerald-800';
+    });
+    btn.className = 'calc-sector-btn p-3 rounded-xl border text-xs sm:text-sm font-bold text-center bg-amber-400 text-emerald-950 border-amber-400 shadow-lg';
+  }
+
+  function setCalcBudget(budget, btn) {
+    currentBudget = budget;
+    document.querySelectorAll('.calc-budget-btn').forEach(function(b) {
+      b.className = 'calc-budget-btn p-2.5 rounded-xl border text-xs font-bold text-center bg-emerald-900/60 text-emerald-200 border-emerald-800 hover:bg-emerald-800';
+    });
+    btn.className = 'calc-budget-btn p-2.5 rounded-xl border text-xs font-bold text-center bg-amber-400 text-emerald-950 border-amber-400 shadow-lg';
+  }
+
+  // Google Sheet WebApp URL Endpoint
+  var GOOGLE_SHEET_ENDPOINT = "https://script.google.com/macros/s/AKfycbyHSOC6QaYuTbRH8C2NN-xahi0qijj9rq-31TUZWP0hLpkLsE-Bz1WiE5OnrRTtveFWiw/exec";
+
+  // Form Submission Handler
+  function handleFormSubmit(event) {
+    event.preventDefault();
+    
+    var submitBtn = document.getElementById('submit-btn');
+    submitBtn.disabled = true;
+    submitBtn.innerHTML = '<span>Processing Brief...</span>';
+
+    // Collect checked interests
+    var interests = [];
+    document.querySelectorAll('input[name="interests"]:checked').forEach(function(cb) {
+      interests.push(cb.value);
+    });
+
+    // Collect land status
+    var landStatusElem = document.querySelector('input[name="landStatus"]:checked');
+    var landStatus = landStatusElem ? landStatusElem.value : 'Yes, in Kwara State.';
+
+    // Collect land scale
+    var landScaleElem = document.querySelector('input[name="landScale"]:checked');
+    var landScale = landScaleElem ? landScaleElem.value : 'Medium Scale (5 – 50 Acres)';
+
+    var payload = {
+      id: "LEAD-" + Date.now(),
+      fullName: document.getElementById('inp-fullName').value.trim(),
+      companyName: document.getElementById('inp-companyName').value.trim() || 'N/A',
+      email: document.getElementById('inp-email').value.trim(),
+      phone: document.getElementById('inp-phone').value.trim(),
+      location: document.getElementById('inp-location').value.trim(),
+      farmingInterests: interests.length > 0 ? interests : ['General Agribusiness Consultation'],
+      landStatus: landStatus,
+      landScale: landScale,
+      budget: document.getElementById('inp-budget').value,
+      timeline: document.getElementById('inp-timeline').value,
+      additionalDetails: document.getElementById('inp-details').value.trim()
+    };
+
+    // Format WhatsApp message
+    var waMsg = "🌿 *JAYTECH FARMS - EXECUTIVE CONSULTATION BRIEF* 🌿\n\n" +
+      "👤 *Client Name:* " + payload.fullName + "\n" +
+      "🏢 *Company:* " + payload.companyName + "\n" +
+      "📧 *Email:* " + payload.email + "\n" +
+      "📞 *Phone/WhatsApp:* " + payload.phone + "\n" +
+      "📍 *Location:* " + payload.location + "\n\n" +
+      "🌱 *Agricultural Interests:*\n• " + payload.farmingInterests.join("\n• ") + "\n\n" +
+      "🗺️ *Land Status:* " + payload.landStatus + "\n" +
+      "📐 *Target Scale:* " + payload.landScale + "\n" +
+      "💰 *Capital Budget:* " + payload.budget + "\n" +
+      "⏳ *Target Timeline:* " + payload.timeline + "\n\n" +
+      "📝 *Specific Notes:* " + (payload.additionalDetails || "None provided") + "\n\n" +
+      "---\n_Sent via JAYTECH FARMS Turnkey Consultation Portal_";
+
+    var waUrl = "https://wa.me/2348033106047?text=" + encodeURIComponent(waMsg);
+
+    // Send asynchronously to Google Sheet WebApp
+    try {
+      fetch(GOOGLE_SHEET_ENDPOINT, {
+        method: 'POST',
+        mode: 'no-cors',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload)
+      }).catch(function(err) {
+        console.log("Sheet post handled:", err);
+      });
+    } catch (e) {
+      console.log("Sheet post err:", e);
+    }
+
+    // Show Success Box & Update WhatsApp button link
+    document.getElementById('agri-lead-form').classList.add('hidden');
+    document.getElementById('form-success-box').classList.remove('hidden');
+    document.getElementById('success-whatsapp-btn').href = waUrl;
+    
+    // Automatically open WhatsApp in a new tab after 1 second
+    setTimeout(function() {
+      window.open(waUrl, '_blank');
+    }, 1200);
+  }
+</script>
+
+</body>
+</html>
